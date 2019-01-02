@@ -1,0 +1,137 @@
+//
+// Plugin: Fullcalendar
+// --------------------------------------------------
+
+
+// jQuery Fullcalendar
+.full-calendar {
+
+	// Fullcalendar header
+	.fc-header {
+		margin-bottom: (@base-margin - 5);
+		h2 {
+			margin: 0;
+			font-size: @font-size-large;
+			line-height: normal;
+		}
+	}
+
+	// Fullcalendar content
+	.fc-content {
+		thead {
+			th.fc-first {
+				border-top-left-radius: @border-radius-base;
+			}
+			th.fc-last {
+				border-top-right-radius: @border-radius-base;
+			}
+		}
+	}
+	.fc-widget-header {
+		font-size: @font-size-large;
+		color: @sangoma-gray;
+		background: @sangoma-silver;
+		border-color: @white;
+	}
+	.fc-widget-content {
+		border-color: @white;
+		background-color: @sangoma-white;
+	}
+	.fc-widget-content.fc-state-highlight {
+		background-color: @white;
+	}
+	.fc-grid .fc-day-number {
+		color: @sangoma-gray;
+		font-weight: bold;
+	}
+	.fc-week.fc-last {
+		td.fc-first {
+			border-bottom-left-radius: @border-radius-base;
+		}
+		td.fc-last {
+			border-bottom-right-radius: @border-radius-base;
+		}
+	}
+
+	// Fullcalendar buttons
+	.fc-button {
+		display: inline-block;
+		padding: 2px @padding-base-horizontal;
+		margin-bottom: 0;
+		font-size: @font-size-base;
+		font-weight: @btn-font-weight;
+		line-height: @line-height-base;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		border: none;
+		white-space: nowrap;
+		text-shadow: none;
+		&.fc-state-default {
+			color: @sangoma-gray;
+			background: @sangoma-silver;
+		}
+		&.fc-state-active,
+		&.fc-state-default:hover {
+			color: @sangoma-white;
+			background: @template-color;
+			.box-shadow(none);
+		}
+		&.fc-state-disabled,
+		&.fc-state-disabled:hover {
+			color: @sangoma-dark;
+			background: @sangoma-silver;
+			cursor: default;
+			.opacity(0.3);
+		}
+		.elusive {
+			font-size: @font-size-base + 2;
+			position: relative;
+			top: 1px;
+		}
+	}
+}
+
+// FullCalendar event style
+.fc-event {
+	padding: 0 5px;
+	font-weight: bold;
+	border-color: @template-color;
+	background-color: @template-color;
+	border-radius: @border-radius-base;
+	&.event-red {
+		background: @sangoma-red;
+		border-color: @sangoma-red;
+	}
+	&.event-blue {
+		background: @sangoma-blue;
+		border-color: @sangoma-blue;
+	}
+	&.event-green {
+		background: @sangoma-green;
+		border-color: @sangoma-green;
+	}
+	&.event-orange {
+		background: @sangoma-orange;
+		border-color: @sangoma-orange;
+	}
+	&.event-purple {
+		background: @sangoma-purple;
+		border-color: @sangoma-purple;
+	}
+	&.event-turquoise {
+		background: @sangoma-turquoise;
+		border-color: @sangoma-turquoise;
+	}
+	&.event-dark {
+		background: @sangoma-dark;
+		border-color: @sangoma-dark;
+	}
+	&.event-gray {
+		background: @sangoma-gray;
+		border-color: @sangoma-gray;
+	}
+}
+a.fc-event:hover {
+	color: @white;
+}

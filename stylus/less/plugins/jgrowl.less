@@ -1,0 +1,59 @@
+//
+// Plugin: jGrowl
+// --------------------------------------------------
+
+
+// jQuery jGrowl
+div.jGrowl div.jGrowl-notification,
+div.jGrowl div.jGrowl-closer {
+	color: @white;
+	background-color: @template-dark;
+	text-shadow: none;
+	border-radius: @border-radius-base;
+	.box-shadow(none);
+	.opacity(1);
+}
+div.jGrowl div.jGrowl-closer {
+	color: @body-bg;
+	.opacity(0.35);
+	.box-shadow(none);
+	&:hover {
+		.opacity(0.9);
+		.box-shadow(none);
+	}
+}
+
+// Growl colors
+div.jGrowl div {
+	color: @white;
+	a {
+		color: @white;
+		border-bottom: 1px dotted;
+		&:hover {
+			color: @white;
+			border-bottom: 1px solid;
+			text-decoration: none;
+		}
+	}
+	&.primary {
+		background-color: @template-color;
+	}
+	&.red {
+		background-color: @sangoma-red;
+	}
+	&.blue {
+		background-color: @sangoma-blue;
+	}
+	&.green {
+		background-color: @sangoma-green;
+	}
+	&.orange {
+		background-color: @sangoma-orange;
+	}
+	&.purple {
+		background-color: @sangoma-purple;
+	}
+	&.turquoise {
+		background-color: @sangoma-turquoise;
+	}
+}

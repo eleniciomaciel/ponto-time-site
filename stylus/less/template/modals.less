@@ -1,0 +1,49 @@
+//
+// Sangoma modals
+// --------------------------------------------------
+
+
+// Overwrite default modal style
+.modal-header {
+	border: none;
+	.border-top-radius(@border-radius-large);
+}
+.modal-content {
+	border: none;
+}
+
+// Adjust backdrop color
+.modal-backdrop.in {
+	.opacity(0.7);
+}
+
+// Modal color variants
+.modal {
+	&.primary {
+		.modal-variant(@template-color; @white);
+	}
+	&.red {
+		.modal-variant(@sangoma-red; @white);
+	}
+	&.blue {
+		.modal-variant(@sangoma-blue; @white);
+	}
+	&.green {
+		.modal-variant(@sangoma-green; @white);
+	}
+	&.purple {
+		.modal-variant(@sangoma-purple; @white);
+	}
+	&.turquoise {
+		.modal-variant(@sangoma-turquoise; @white);
+	}
+	&.orange {
+		.modal-variant(@sangoma-orange; @white);
+	}
+	&.gray {
+		.modal-variant(@sangoma-gray; @white);
+	}
+	&.dark {
+		.modal-variant(@sangoma-dark; @white);
+	}
+}

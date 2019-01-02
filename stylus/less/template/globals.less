@@ -1,0 +1,42 @@
+//
+// Sangoma global styles
+// --------------------------------------------------
+
+
+// do we still need .no-* classes?
+
+html,
+body {
+	height: 100%;
+}
+body {
+	background-repeat: repeat;
+	background-position: center center;
+	position: relative;
+}
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+.no-margin {
+	margin: 0 !important;
+}
+.no-bottom-margin {
+	margin-bottom: 0 !important;
+}
+.no-padding {
+	padding: 0 !important;
+}
+
+// Responsive
+@media (min-width: @grid-float-breakpoint) {
+	#wrapper {
+		min-height: 100%;
+		height: auto !important;
+		height: 100%;
+		margin: 0 0 -@footer-height;
+		padding: 0 0 @footer-height;
+	}
+}
+
+

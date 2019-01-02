@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>File structure | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="../css/sangoma-blue.css">
+
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery.js"><\/script>')</script>
+		<script src="js/libs/modernizr.js"></script>
+
+		<!-- IE8 support of media queries and CSS 2/3 selectors -->
+		<!--[if lt IE 9]>
+			<script src="../js/libs/respond.min.js"></script>
+			<script src="../js/libs/selectivizr.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-inverse pull-right"><span class="elusive icon-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+			</header>
+			<!-- /Main page header -->
+
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Navigation block -->
+					<div class="col-sm-3">
+						
+						<!-- Main navigation -->
+						<nav class="main-navigation main-navigation-sidebar navbar navbar-default" role="navigation">
+
+							<!-- Collapse navigation for mobile -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navigation-collapse">
+									<span class="elusive icon-align-justify"></span> Sangoma Template Documentation
+								</button>
+							</div>
+							<!-- /Collapse navigation for mobile -->
+
+							<!-- Navigation -->
+							<div class="main-navigation-collapse collapse navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li class="active"><a href="file-structure.html">File structure</a></li>
+									<li><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li><a href="data-blocks.html">Data blocks</a></li>
+									<li><a href="navigation.html">Navigation</a></li>
+									<li><a href="components.html">Components</a></li>
+									<li><a href="javascript.html">Javascript</a></li>
+									<li><a href="plugins.html">Plugins</a></li>
+								</ul>
+							</div>
+							<!-- /Navigation -->
+
+						</nav>
+						<!-- /Main navigation -->
+
+					</div>
+					<!-- /Navigation block -->
+					
+					<!-- Content block -->
+					<div class="col-sm-9">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="jumbotron blue">
+									<h1><span class="elusive icon-file-alt"></span> File structure</h1>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>HTML</h2>
+									</header>
+									<section>
+										<p>HTML file structure is pretty straightforward. Easy HTML file represents sets of user interface elements. Don’t forget that many elements are combinable.</p>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>CSS</h2>
+									</header>
+									<section>
+										<p>There are a few CSS files which serves specific purposes. All of them you will find in css folder. If you are new to Twitter Bootstrap, we strongly recommend to take a look at it first.</p>
+										<ul>
+											<li><strong>/css/font</strong> - All fonts for icons</li>
+											<li><strong>/css/plugins</strong> - CSS styles for 3rd party plugins</li>
+											<li><strong>/css/sangoma-color.css</strong> - Compiled LESS into CSS for each color set</li>
+										</ul>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>LESS</h2>
+									</header>
+									<section>
+										<p>Template and Bootstrap are written with LESS. Best thing about LESS is that it allows you easily and very fast modify template style. See the <strong>settings.less</strong> for settings and variables.</p>
+										<ul>
+											<li><strong>/less/bootstrap</strong> - Original Bootstrap LESS files</li>
+											<li><strong>/less/plugins</strong> - All plugins style modifications</li>
+											<li><strong>/less/icons</strong> - Icon set styles</li>
+											<li><strong>/less/template</strong> - Template styles</li>
+											<li><strong>/less/demo-styles.less</strong> - Live preview styles, you can remove it</li>
+											<li><strong>/less/settings.less</strong> - Settings and variables for Bootstrap and template</li>
+											<li><strong>/less/style.less</strong> - Main constructor file</li>
+										</ul>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>Javascript</h2>
+									</header>
+									<section>
+										<p>There are three different flavours of javascript files located under js folder.</p>
+										<p>If you are new to some of these plugins, you should visit their homepages for explanation how they work or for more configuration options. List of all used plugins can be found under the <a href="plugins.html">Plugin topic</a>.</p>
+										<ul>
+											<li><strong>/js/libs/modernizr.js</strong> - Web browser feature detection Javascript library including HTML5 enabler for older web browsers.</li>
+											<li><strong>/js/libs/selectivizr.js</strong> - JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in IE 6-8.</li>
+											<li><strong>/js/libs/jquery.js</strong> - jQuery library fallback if CDN is not available</li>
+											<li><strong>/js/libs/jquery-ui.js</strong> - Custom jQuery UI build</li>
+											<li><strong>/js/boostrap</strong> - Original Twitter Bootstrap javascript plugins</li>
+											<li><strong>/js/plugins</strong> - Custom 3rd party plugins for jQuery</li>
+											<li><strong>/js/less.js</strong> - Live LESS compiler</li>
+										</ul>
+									</section>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- /Content block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+		</div>
+		<!-- /Full height wrapper -->
+
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://getbootstrap.com/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="http://support.walkingpixels.com/">Support</a></li>
+					<li><a href="http://getbootstrap.com/getting-started/">Documentation</a></li>
+					<li><a href="http://parallaq.com/">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-back-to-top" title="Back to top"><span class="elusive icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+	</body>
+</html>

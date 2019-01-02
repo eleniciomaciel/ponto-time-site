@@ -1,0 +1,25 @@
+//
+// Plugin: LightBox
+// --------------------------------------------------
+
+
+// jQuery LightBox
+@lightbox-img-path:                               '../img/plugins/lightbox';
+#lightboxOverlay {
+	top: -@grid-gutter-width;
+}
+#lightbox .lb-data {
+	padding: 0;
+}
+.lb-cancel {
+	background-image: url("@{lightbox-img-path}/loading.gif");
+}
+.lb-prev:hover {
+	background-image: url("@{lightbox-img-path}/prev.png");
+}
+.lb-next:hover {
+	background-image: url("@{lightbox-img-path}/next.png");
+}
+.lb-data .lb-close {
+	background-image: url("@{lightbox-img-path}/close.png");
+}

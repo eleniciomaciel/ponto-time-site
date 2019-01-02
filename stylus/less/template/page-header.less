@@ -1,0 +1,20 @@
+//
+// Sangoma page header
+// --------------------------------------------------
+
+
+.page-header {
+	border: none;
+	h1 {
+		color: darken(@body-bg, 60%);
+	}
+	p {
+		color: darken(@body-bg, 50%);
+		font-size: @font-size-large;
+		line-height: normal;
+		margin: 0;
+		& + p {
+			margin-top: @base-margin;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+//
+// Sangoma progress bar
+// --------------------------------------------------
+
+
+// Overwrite default progress bars
+.progress {
+	margin-bottom: @base-margin;
+	.box-shadow(none);
+
+	// Thin progress bar style
+	&.progress-line {
+		height: @line-height-computed / 2;
+	}
+}
+.progress-bar {
+	font-weight: bold;
+	.box-shadow(none);
+}
+
+// Change background size for strips
+.progress-striped .progress-bar {
+	background-size: 20px 20px;
+}
+
+// New dark variant
+.progress-bar-inverse {
+  .progress-bar-variant(@sangoma-dark);
+}

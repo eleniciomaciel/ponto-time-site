@@ -1,0 +1,690 @@
+//
+// Style settings
+// --------------------------------------------------
+
+
+// Fast customization
+// --------------------------------------------------
+// Sangoma colors
+@sangoma-red:                                        #c0392b;
+@sangoma-red-loading:                                '../img/icons/icon_loading_red.gif';
+@sangoma-red-loading-header:                         '../img/icons/icon_loading_red_header.gif';
+@sangoma-blue:                                       #2980b9;
+@sangoma-blue-loading:                               '../img/icons/icon_loading_blue.gif';
+@sangoma-blue-loading-header:                        '../img/icons/icon_loading_blue_header.gif';
+@sangoma-green:                                      #27ae60;
+@sangoma-green-loading:                              '../img/icons/icon_loading_green.gif';
+@sangoma-green-loading-header:                       '../img/icons/icon_loading_green_header.gif';
+@sangoma-purple:                                     #8e44ad;
+@sangoma-purple-loading:                             '../img/icons/icon_loading_purple.gif';
+@sangoma-purple-loading-header:                      '../img/icons/icon_loading_purple_header.gif';
+@sangoma-turquoise:                                  #16a085;
+@sangoma-turquoise-loading:                          '../img/icons/icon_loading_turquoise.gif';
+@sangoma-turquoise-loading-header:                   '../img/icons/icon_loading_turquoise_header.gif';
+@sangoma-orange:                                     #f39c12;
+@sangoma-orange-loading:                             '../img/icons/icon_loading_orange.gif';
+@sangoma-orange-loading-header:                      '../img/icons/icon_loading_orange_header.gif';
+@sangoma-gray:                                       #7f8c8d;
+@sangoma-gray-light:                                 #dcE4ec;
+@sangoma-gray-loading:                               '../img/icons/icon_loading_gray.gif';
+@sangoma-gray-loading-header:                        '../img/icons/icon_loading_gray_header.gif';
+@sangoma-dark:                                       #2c3e50;
+@sangoma-dark-loading:                               '../img/icons/icon_loading_dark.gif';
+@sangoma-dark-loading-header:                        '../img/icons/icon_loading_dark_header.gif';
+@sangoma-silver:                                     #bdc3c7;
+@sangoma-white:                                      #f2f3f4;
+
+// Fast color replacing
+@sangoma-color:                                      @sangoma-turquoise;
+@sangoma-loading:                                    @sangoma-turquoise-loading;
+@sangoma-loading-header:                             @sangoma-turquoise-loading-header;
+@pretty-checkable:                                   @prettycheck-turquoise-img-path;
+
+// Template style
+@template-color:                                     @sangoma-color;
+@template-dark:                                      @sangoma-dark;
+@template-logo-height:                               60px;
+@template-logo:                                      '../img/template_logo.png';
+@template-login-logo:                                '../img/template_login_logo.png';
+
+
+// Globals
+// --------------------------------------------------
+
+// Grays
+// -------------------------
+
+@gray-darker:                                        lighten(#000, 13.5%); // #222
+@gray-dark:                                          lighten(#000, 20%);   // #333
+@gray:                                               lighten(#000, 33.5%); // #555
+@gray-light:                                         lighten(#000, 60%);   // #999
+@gray-lighter:                                       lighten(#000, 93.5%); // #eee
+@white:                                              #fff;
+
+// Brand colors
+// -------------------------
+
+@brand-primary:                                      @template-color;
+@brand-success:                                      @sangoma-green;
+@brand-warning:                                      @sangoma-orange;
+@brand-danger:                                       @sangoma-red;
+@brand-info:                                         @sangoma-blue;
+
+// Scaffolding
+// -------------------------
+
+@body-bg:                                            #ecf0f1;
+@text-color:                                         @sangoma-dark;
+@base-margin:                                        20px;
+@footer-height:                                      50px;
+
+// Links
+// -------------------------
+
+@link-color:                                         @brand-primary;
+@link-hover-color:                                   darken(@link-color, 15%);
+
+// Typography
+// -------------------------
+
+@font-family-sans-serif:                             'Lato', Helvetica, Arial, sans-serif;
+@font-family-serif:                                  Georgia, 'Times New Roman', Times, serif;
+@font-family-monospace:                              Monaco, Menlo, Consolas, 'Courier New', monospace;
+@font-family-base:                                   @font-family-sans-serif;
+
+@font-size-base:                                     14px;
+@font-size-large:                                    ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:                                    ceil(@font-size-base * 0.85); // ~12px
+
+@font-size-h1:                                       floor(@font-size-base * 2.6); // ~36px
+@font-size-h2:                                       floor(@font-size-base * 2.15); // ~30px
+@font-size-h3:                                       ceil(@font-size-base * 1.7); // ~24px
+@font-size-h4:                                       ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5:                                       @font-size-base;
+@font-size-h6:                                       ceil(@font-size-base * 0.85); // ~12px
+
+@line-height-base:                                   1.428571429; // 20/14
+@line-height-computed:                               floor(@font-size-base * @line-height-base); // ~20px
+
+@headings-font-family:                               @font-family-base;
+@headings-font-weight:                               900;
+@headings-line-height:                               1.1;
+@headings-color:                                     inherit;
+
+// Iconography
+// -------------------------
+
+@icon-font-path:                                     @icon-elusive;
+
+@icon-glyphicons:                                    '../css/font';
+@icon-elusive:                                       '../css/font';
+@icon-awesome:                                       '../css/font';
+@icon-famfamfam:                                     '../img/icons/famfamfam-icons.png';
+
+
+// Components
+// -------------------------
+// Based on 14px font-size and 1.428 line-height (~20px to start)
+
+@padding-base-vertical:                            6px;
+@padding-base-horizontal:                          12px;
+
+@padding-large-vertical:                           10px;
+@padding-large-horizontal:                         16px;
+
+@padding-small-vertical:                           5px;
+@padding-small-horizontal:                         10px;
+
+@line-height-large:                                1.33;
+@line-height-small:                                1.5;
+
+@border-radius-base:                               4px;
+@border-radius-large:                              6px;
+@border-radius-small:                              3px;
+
+@component-active-color:                           #fff;
+@component-active-bg:                              @brand-primary;
+
+@caret-width-base:                                 4px;
+@caret-width-large:                                5px;
+
+// Tables
+// -------------------------
+
+@table-cell-padding:                               8px;
+@table-condensed-cell-padding:                     5px;
+
+@table-bg:                                         transparent; // overall background-color
+@table-bg-accent:                                  #f9f9f9; // for striping
+@table-bg-hover:                                   darken(@sangoma-white, 5%);
+@table-bg-active:                                  @table-bg-hover;
+
+@table-border-color:                               @white; // table and cell border
+
+
+// Buttons
+// -------------------------
+
+@btn-font-weight:                                  bold;
+
+@btn-default-color:                                @sangoma-gray;
+@btn-default-bg:                                   @sangoma-gray-light;
+@btn-default-border:                               @sangoma-gray-light;
+
+@btn-primary-color:                                @white;
+@btn-primary-bg:                                   @brand-primary;
+@btn-primary-border:                               @brand-primary;
+
+@btn-success-color:                                @white;
+@btn-success-bg:                                   @brand-success;
+@btn-success-border:                               @brand-success;
+
+@btn-warning-color:                                @white;
+@btn-warning-bg:                                   @brand-warning;
+@btn-warning-border:                               @brand-warning;
+
+@btn-danger-color:                                 @white;
+@btn-danger-bg:                                    @brand-danger;
+@btn-danger-border:                                @brand-danger;
+
+@btn-info-color:                                   @white;
+@btn-info-bg:                                      @brand-info;
+@btn-info-border:                                  @brand-info;
+
+@btn-link-disabled-color:                          @gray-light;
+
+
+// Forms
+// -------------------------
+
+@input-bg:                                         @white;
+@input-bg-disabled:                                @gray-lighter;
+
+@input-color:                                      @gray;
+@input-border:                                     @sangoma-gray-light;
+@input-border-radius:                              @border-radius-base;
+@input-border-focus:                               @template-color;
+
+@input-color-placeholder:                          @gray-light;
+
+@input-height-base:                                (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:                               (floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:                               (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+@legend-color:                                     @sangoma-dark;
+@legend-border-color:                              @input-border;
+
+@input-group-addon-bg:                             @input-border;
+@input-group-addon-border-color:                   @input-border;
+
+
+// Dropdowns
+// -------------------------
+
+@dropdown-bg:                                      @sangoma-white;
+@dropdown-border:                                  @sangoma-white;
+@dropdown-fallback-border:                         @sangoma-white;
+@dropdown-divider-bg:                              darken(@sangoma-white, 10%);;
+
+@dropdown-link-color:                              @gray-dark;
+
+@dropdown-link-hover-color:                        @white;
+@dropdown-link-hover-bg:                           @template-color;
+
+@dropdown-link-active-color:                       @white;
+@dropdown-link-active-bg:                          @template-color;
+
+@dropdown-link-disabled-color:                     @gray-light;
+
+@dropdown-header-color:                            @gray-light;
+
+@dropdown-caret-color:                             @gray-dark;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+
+@zindex-navbar:                                    1000;
+@zindex-dropdown:                                  1000;
+@zindex-popover:                                   1010;
+@zindex-tooltip:                                   1030;
+@zindex-navbar-fixed:                              1030;
+@zindex-modal-background:                          1040;
+@zindex-modal:                                     1050;
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                                        480px;
+@screen-xs-min:                                    @screen-xs;
+@screen-phone:                                     @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                                        768px;
+@screen-sm-min:                                    @screen-sm;
+@screen-tablet:                                    @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                                        992px;
+@screen-md-min:                                    @screen-md;
+@screen-desktop:                                   @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                                        1200px;
+@screen-lg-min:                                    @screen-lg;
+@screen-lg-desktop:                                @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:                                    (@screen-sm-min - 1);
+@screen-sm-max:                                    (@screen-md-min - 1);
+@screen-md-max:                                    (@screen-lg-min - 1);
+
+
+// Grid system
+// --------------------------------------------------
+
+// Number of columns in the grid system
+@grid-columns:                                     12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width:                                @base-margin;
+// Point at which the navbar stops collapsing
+@grid-float-breakpoint:                            @screen-sm-min;
+
+
+// Navbar
+// -------------------------
+
+// Basics of a navbar
+@navbar-height:                                    40px;
+@navbar-margin-bottom:                             @base-margin;
+@navbar-border-radius:                             @border-radius-base;
+@navbar-padding-horizontal:                        floor(@grid-gutter-width / 2);
+@navbar-padding-vertical:                          ((@navbar-height - @line-height-computed) / 2);
+
+@navbar-default-color:                             #777;
+@navbar-default-bg:                                @white;
+@navbar-default-border:                            transparent;
+
+// Navbar links
+@navbar-default-link-color:                        darken(@sangoma-silver, 10%);
+@navbar-default-link-hover-color:                  @white;
+@navbar-default-link-hover-bg:                     @template-color;
+@navbar-default-link-active-color:                 @white;
+@navbar-default-link-active-bg:                    @template-color;
+@navbar-default-link-disabled-color:               #ccc;
+@navbar-default-link-disabled-bg:                  transparent;
+
+// Navbar brand label
+@navbar-default-brand-color:                       @navbar-default-link-color;
+@navbar-default-brand-hover-color:                 darken(@navbar-default-brand-color, 10%);
+@navbar-default-brand-hover-bg:                    transparent;
+
+// Navbar toggle
+@navbar-default-toggle-hover-bg:                   @template-color;
+@navbar-default-toggle-icon-bar-bg:                #ccc;
+@navbar-default-toggle-border-color:               #ddd;
+
+
+// Inverted navbar
+//
+// Reset inverted navbar basics
+@navbar-inverse-color:                             @gray-light;
+@navbar-inverse-bg:                                #222;
+@navbar-inverse-border:                            darken(@navbar-inverse-bg, 10%);
+
+// Inverted navbar links
+@navbar-inverse-link-color:                        @gray-light;
+@navbar-inverse-link-hover-color:                  #fff;
+@navbar-inverse-link-hover-bg:                     transparent;
+@navbar-inverse-link-active-color:                 @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:                    darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-disabled-color:               #444;
+@navbar-inverse-link-disabled-bg:                  transparent;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:                       @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:                 #fff;
+@navbar-inverse-brand-hover-bg:                    transparent;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:                   #333;
+@navbar-inverse-toggle-icon-bar-bg:                #fff;
+@navbar-inverse-toggle-border-color:               #333;
+
+
+// Navs
+// -------------------------
+
+@nav-link-padding:                                 10px 15px;
+@nav-link-hover-bg:                                @gray-lighter;
+
+@nav-disabled-link-color:                          @gray-light;
+@nav-disabled-link-hover-color:                    @gray-light;
+
+@nav-open-link-hover-color:                        #fff;
+@nav-open-caret-border-color:                      #fff;
+
+// Tabs
+@nav-tabs-border-color:                            #ddd;
+
+@nav-tabs-link-hover-border-color:                 @gray-lighter;
+
+@nav-tabs-active-link-hover-bg:                    @body-bg;
+@nav-tabs-active-link-hover-color:                 @gray;
+@nav-tabs-active-link-hover-border-color:          #ddd;
+
+@nav-tabs-justified-link-border-color:             #ddd;
+@nav-tabs-justified-active-link-border-color:      @body-bg;
+
+// Pills
+@nav-pills-border-radius:                          @border-radius-base;
+@nav-pills-active-link-hover-bg:                   @component-active-bg;
+@nav-pills-active-link-hover-color:                @component-active-bg;
+
+
+// Pagination
+// -------------------------
+
+@pagination-bg:                                    @sangoma-white;
+@pagination-border:                                @sangoma-gray;
+
+@pagination-hover-bg:                              @brand-primary;
+
+@pagination-active-bg:                             @brand-primary;
+@pagination-active-color:                          @white;
+
+@pagination-disabled-color:                        lighten(@sangoma-gray, 5%);
+
+
+// Pager
+// -------------------------
+
+@pager-border-radius:                              15px;
+@pager-disabled-color:                             lighten(@sangoma-gray, 5%);
+
+
+// Jumbotron
+// -------------------------
+
+@jumbotron-padding:                                30px;
+@jumbotron-color:                                  inherit;
+@jumbotron-bg:                                     darken(@body-bg, 10%);
+
+@jumbotron-heading-color:                          inherit;
+@jumbotron-font-size:                              ceil(@font-size-base * 1.5);
+
+
+// Form states and alerts
+// -------------------------
+
+@state-warning-text:                               @sangoma-orange;
+@state-warning-bg:                                 #fcf8e3;
+@state-warning-border:                             @sangoma-orange;
+
+@state-danger-text:                                @sangoma-red;
+@state-danger-bg:                                  #f2dede;
+@state-danger-border:                              @sangoma-red;
+
+@state-success-text:                               @sangoma-green;
+@state-success-bg:                                 #dff0d8;
+@state-success-border:                             @sangoma-green;
+
+@state-info-text:                                  @sangoma-blue;
+@state-info-bg:                                    #d9edf7;
+@state-info-border:                                @sangoma-blue;
+
+
+// Tooltips
+// -------------------------
+@tooltip-max-width:                                200px;
+@tooltip-color:                                    @white;
+@tooltip-bg:                                       @sangoma-dark;
+
+@tooltip-arrow-width:                              5px;
+@tooltip-arrow-color:                              @tooltip-bg;
+
+
+// Popovers
+// -------------------------
+@popover-bg:                                       @sangoma-dark;
+@popover-max-width:                                276px;
+@popover-border-color:                             @sangoma-dark;
+@popover-fallback-border-color:                    @sangoma-dark;
+
+@popover-title-bg:                                 @sangoma-dark;
+
+@popover-arrow-width:                              10px;
+@popover-arrow-color:                              @sangoma-dark;
+
+@popover-arrow-outer-width:                        (@popover-arrow-width + 1);
+@popover-arrow-outer-color:                        @sangoma-dark;
+@popover-arrow-outer-fallback-color:               @sangoma-dark;
+
+
+// Labels
+// -------------------------
+
+@label-default-bg:                                 @gray-light;
+@label-primary-bg:                                 @brand-primary;
+@label-success-bg:                                 @brand-success;
+@label-info-bg:                                    @brand-info;
+@label-warning-bg:                                 @brand-warning;
+@label-danger-bg:                                  @brand-danger;
+
+@label-color:                                      #fff;
+@label-link-hover-color:                           #fff;
+
+
+// Modals
+// -------------------------
+@modal-inner-padding:                              20px;
+
+@modal-title-padding:                              15px;
+@modal-title-line-height:                          @line-height-base;
+
+@modal-content-bg:                                 #fff;
+@modal-content-border-color:                       transparent;
+@modal-content-fallback-border-color:              transparent;
+
+@modal-backdrop-bg:                                #000;
+@modal-header-border-color:                        transparent;
+@modal-footer-border-color:                        #e5e5e5;
+
+
+// Alerts
+// -------------------------
+@alert-padding:                                    15px;
+@alert-border-radius:                              @border-radius-base;
+@alert-link-font-weight:                           normal;
+
+@alert-success-bg:                                 @sangoma-green;
+@alert-success-text:                               @white;
+@alert-success-border:                             @sangoma-green;
+
+@alert-info-bg:                                    @sangoma-blue;
+@alert-info-text:                                  @white;
+@alert-info-border:                                @sangoma-blue;
+
+@alert-warning-bg:                                 @sangoma-orange;
+@alert-warning-text:                               @white;
+@alert-warning-border:                             @sangoma-orange;
+
+@alert-danger-bg:                                  @sangoma-red;
+@alert-danger-text:                                @white;
+@alert-danger-border:                              @sangoma-red;
+
+
+// Progress bars
+// -------------------------
+@progress-bg:                                      @sangoma-white;
+@progress-bar-color:                               #fff;
+
+@progress-bar-bg:                                  @brand-primary;
+@progress-bar-success-bg:                          @brand-success;
+@progress-bar-warning-bg:                          @brand-warning;
+@progress-bar-danger-bg:                           @brand-danger;
+@progress-bar-info-bg:                             @brand-info;
+
+
+// List group
+// -------------------------
+@list-group-bg:                                    #fff;
+@list-group-border:                                #ddd;
+@list-group-border-radius:                         @border-radius-base;
+
+@list-group-hover-bg:                              #f5f5f5;
+@list-group-active-color:                          @component-active-color;
+@list-group-active-bg:                             @component-active-bg;
+@list-group-active-border:                         @list-group-active-bg;
+
+@list-group-link-color:                            #555;
+@list-group-link-heading-color:                    #333;
+
+
+// Panels
+// -------------------------
+@panel-bg:                                        @white;
+@panel-inner-border:                              transparent;
+@panel-border-radius:                             @border-radius-base;
+@panel-footer-bg:                                 #f5f5f5;
+
+@panel-default-text:                              darken(@sangoma-silver, 30%);
+@panel-default-border:                            @sangoma-silver;
+@panel-default-heading-bg:                        @sangoma-silver;
+
+@panel-primary-text:                              @white;
+@panel-primary-border:                            @brand-primary;
+@panel-primary-heading-bg:                        @brand-primary;
+
+@panel-success-text:                              @white;
+@panel-success-border:                            @sangoma-green;
+@panel-success-heading-bg:                        @sangoma-green;
+
+@panel-warning-text:                              @white;
+@panel-warning-border:                            @sangoma-orange;
+@panel-warning-heading-bg:                        @sangoma-orange;
+
+@panel-danger-text:                               @white;
+@panel-danger-border:                             @sangoma-red;
+@panel-danger-heading-bg:                         @sangoma-red;
+
+@panel-info-text:                                 @white;
+@panel-info-border:                               @sangoma-blue;
+@panel-info-heading-bg:                           @sangoma-blue;
+
+
+// Thumbnails
+// -------------------------
+@thumbnail-padding:                               4px;
+@thumbnail-bg:                                    @body-bg;
+@thumbnail-border:                                #ddd;
+@thumbnail-border-radius:                         @border-radius-base;
+
+@thumbnail-caption-color:                         @text-color;
+@thumbnail-caption-padding:                       9px;
+
+
+// Wells
+// -------------------------
+@well-bg:                                         @body-bg;
+
+
+// Badges
+// -------------------------
+@badge-color:                                     @white;
+@badge-link-hover-color:                          @white;
+@badge-bg:                                        @sangoma-red;
+
+@badge-active-color:                              @white;
+@badge-active-bg:                                 @sangoma-red;
+
+@badge-font-weight:                               bold;
+@badge-line-height:                               1;
+@badge-border-radius:                             4px;
+
+
+// Breadcrumbs
+// -------------------------
+@breadcrumb-bg:                                   @white;
+@breadcrumb-color:                                @sangoma-gray-light;
+@breadcrumb-active-color:                         darken(@sangoma-gray-light, 20%);
+@breadcrumb-separator:                            "/";
+
+
+// Carousel
+// ------------------------
+
+@carousel-text-shadow:                            0 1px 2px rgba(0,0,0,.6);
+
+@carousel-control-color:                          #fff;
+@carousel-control-width:                          15%;
+@carousel-control-opacity:                        .5;
+@carousel-control-font-size:                      20px;
+
+@carousel-indicator-active-bg:                    #fff;
+@carousel-indicator-border-color:                 #fff;
+
+@carousel-caption-color:                          #fff;
+
+
+// Close
+// ------------------------
+@close-color:                                     #000;
+@close-font-weight:                               bold;
+@close-text-shadow:                               0 1px 0 #fff;
+
+
+// Code
+// ------------------------
+@code-color:                                      #717577;
+@code-bg:                                         @sangoma-white;
+
+@pre-bg:                                          @sangoma-white;
+@pre-color:                                       #717577;
+@pre-border-color:                                #ccc;
+@pre-scrollable-max-height:                       340px;
+
+// Type
+// ------------------------
+@text-muted:                                      @gray-light;
+@abbr-border-color:                               @gray-light;
+@headings-small-color:                            @gray-light;
+@blockquote-small-color:                          @sangoma-silver;
+@blockquote-border-color:                         @sangoma-silver;
+@page-header-border-color:                        @gray-lighter;
+
+// Miscellaneous
+// -------------------------
+
+// Hr border color
+@hr-border:                                       @gray-lighter;
+
+// Horizontal forms & lists
+@component-offset-horizontal:                     180px;
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+@container-tablet:                                ((720px + @grid-gutter-width));
+@container-sm:                                    @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:                               ((940px + @grid-gutter-width));
+@container-md:                                    @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:                         ((1140px + @grid-gutter-width));
+@container-lg:                                    @container-large-desktop;

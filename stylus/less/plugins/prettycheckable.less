@@ -1,0 +1,69 @@
+//
+// Plugin: prettyCheckable
+// --------------------------------------------------
+
+
+// jQuery prettyCheckable
+@prettycheck-red-img-path:                        "../img/plugins/prettyCheckable/prettyCheckable-red.png";
+@prettycheck-blue-img-path:                       "../img/plugins/prettyCheckable/prettyCheckable-blue.png";
+@prettycheck-green-img-path:                      "../img/plugins/prettyCheckable/prettyCheckable-green.png";
+@prettycheck-purple-img-path:                     "../img/plugins/prettyCheckable/prettyCheckable-purple.png";
+@prettycheck-turquoise-img-path:                  "../img/plugins/prettyCheckable/prettyCheckable-turquoise.png";
+@prettycheck-orange-img-path:                     "../img/plugins/prettyCheckable/prettyCheckable-orange.png";
+@prettycheck-gray-img-path:                       "../img/plugins/prettyCheckable/prettyCheckable-gray.png";
+@prettycheck-dark-img-path:                       "../img/plugins/prettyCheckable/prettyCheckable-dark.png";
+.checkbox,
+.radio,
+.radio-inline,
+.checkbox-inline {
+	&.styled-checkbox,
+	&.styled-radio {
+		padding-left: 0;
+		.clearfix();
+	}
+}
+.prettycheckbox,
+.prettyradio {
+	display: block;
+	float: left;
+	a {
+		width: @line-height-base;
+		height: @line-height-base;
+		background-image: url("@{pretty-checkable}");
+	}
+	label {
+		margin: 0;
+	}
+	&.red a {
+		background-image: url("@{prettycheck-red-img-path}");
+	}
+	&.blue a {
+		background-image: url("@{prettycheck-blue-img-path}");
+	}
+	&.green a {
+		background-image: url("@{prettycheck-green-img-path}");
+	}
+	&.purple a {
+		background-image: url("@{prettycheck-purple-img-path}");
+	}
+	&.turquoise a {
+		background-image: url("@{prettycheck-turquoise-img-path}");
+	}
+	&.orange a {
+		background-image: url("@{prettycheck-orange-img-path}");
+	}
+	&.gray a {
+		background-image: url("@{prettycheck-gray-img-path}");
+	}
+	&.dark a {
+		background-image: url("@{prettycheck-blue-img-path}");
+	}
+}
+.todo-block {
+	.prettycheckbox,
+	.prettyradio {
+		label {
+			display: none;
+		}
+	}
+}

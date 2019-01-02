@@ -1,0 +1,30 @@
+//
+// Sangoma pager
+// --------------------------------------------------
+
+
+// Overwrite default pager style
+.pager {
+	font-weight: bold;
+	li {
+		& > a,
+		& > span {
+			border: none;
+			color: @sangoma-gray;
+		}
+		& > a:hover,
+		& > a:focus {
+			color: @white;
+		}
+	}
+	li.disabled {
+		> a,
+		> a:hover,
+		> a:focus,
+		> span {
+			color: @pager-disabled-color;
+			background-color: @sangoma-silver;
+			.opacity(65);
+		}
+	}
+}

@@ -1,0 +1,309 @@
+//
+// Sangoma main navigation
+// --------------------------------------------------
+
+
+// Overwrite default navbar styles
+.main-navigation {
+	margin-top: @base-margin;
+	margin-bottom: 0;
+	border: none;
+	clear: both;
+
+	// Remove left and right paddings
+	.navbar-collapse {
+		padding: 0;
+		box-shadow: none;
+	}
+
+	// Restyle navigation items/links
+	&.navbar-default .navbar-nav {
+		& > li {
+			&:first-child a {
+				.border-left-radius(@border-radius-base);
+			}
+			& + li {
+				border-left: 2px solid @body-bg;
+			}
+			& > a {
+				font-weight: bold;
+				font-size: (@font-size-base + 2);
+				padding: 10px;
+				line-height: (@navbar-height - 20); // Navbar height - top and bottom padding (10px)
+				.transition(color 350ms ease);
+				.elusive {
+					line-height: 1;
+					vertical-align: text-bottom;
+				}
+			}
+			&.active {
+				& > a,
+				& > a:hover,
+				& > a:focus {
+					.caret {
+						border-top-color: @white;
+						border-bottom-color: @white;
+					}
+				}
+			}
+		}
+	}
+
+	// Restyle dropdown
+	.navbar-nav > .open {
+		& > a,
+		& > a:hover,
+		& > a:focus {
+			color: @white;
+			background-color: darken(@template-color, 5%);
+			.caret {
+				border-top-color: @white;
+				border-bottom-color: @white;
+			}
+		}
+		.dropdown-menu {
+			background-color: darken(@template-color, 5%);
+			& > li > a {
+				color: @white;
+				.opacity(0.7);
+				&:hover,
+				&:focus {
+					background-color: darken(@template-color, 10%);
+					.opacity(1);
+				}
+			}
+			& > .active > a,
+			& > .active > a:hover,
+			& > .active > a:focus {
+				color: @white;
+				background-color: darken(@template-color, 10%);
+				.opacity(1);
+			}
+			li.divider {
+				background-color: darken(@template-color, 10%)
+			}
+			li.dropdown-header {
+				color: @white;
+			}
+			.caret {
+				border-top: @caret-width-base solid @white;
+			}
+			.dropdown-submenu > a:after {
+				border-left: @caret-width-base solid @white;
+			}
+		}
+	}
+
+	// Form
+	.navbar-form {
+		padding-left: 5px;
+	}
+
+	// Navigation badge
+	.badge {
+		position: absolute;
+		top: -5px;
+		right: -10px;
+		z-index: 1;
+	}
+	.dropdown-menu .badge {
+		top: 4px;
+		left: -10px;
+		right: auto;
+	}
+}
+
+// Adjust navbar form positions
+.navbar-form.navbar-right {
+	padding-right: 3px;
+}
+.navbar-form.navbar-left {
+	padding-left: 3px;
+}
+.navbar-form.navbar-right:last-child {
+	margin-right: 0px;
+}
+
+// Alternative sidebar navigation
+.main-navigation.main-navigation-sidebar {
+	margin-top: 0;
+	.navbar-collapse {
+		max-height: none;
+	}
+
+	// Restyle navigation items/links
+	.navbar-nav {
+		float: none;
+		> li {
+			float: none;
+			&:first-child a {
+				border-radius: @border-radius-base @border-radius-base 0 0;
+			}
+			&:last-child a {
+				border-radius: 0 0 @border-radius-base @border-radius-base;
+			}
+			&.dropdown.open a {
+				.border-bottom-radius(0);
+			}
+			& + li {
+				border-left: none;
+				border-top: 2px solid @body-bg;
+			}
+			& > a {
+				font-weight: bold;
+				font-size: (@font-size-base + 2);
+				line-height: (@navbar-height - 20); // Navbar height - top and bottom padding (10px)
+				.transition(color 350ms ease);
+				.elusive {
+					line-height: 1;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+	}
+
+	// Restyle dropdowns
+	.dropdown-menu {
+		position: static;
+		float: none;
+	}
+	.dropdown-submenu {
+		& > a:after {
+			margin-top: 10px;
+			border-width: @caret-width-base @caret-width-base 0;
+			border-color: @white transparent;
+		}
+		& > .dropdown-menu {
+			margin: 0;
+		}
+	}
+	.navbar-nav > .open .dropdown-menu .dropdown-submenu > a:after {
+		border-color: @white transparent;
+	}
+	.navbar-nav > li {
+		& > .dropdown-menu {
+			border-radius: 0;
+		}
+		&:last-child .dropdown-menu {
+			.border-bottom-radius(@border-radius-base);
+		}
+	}
+
+	// Form
+	.navbar-form {
+		margin: 0;
+		padding: 5px;
+		border-top: 2px solid @body-bg;
+		background-color: @white;
+		border-radius: 0 0 @border-radius-base @border-radius-base;
+		.clearfix();
+		.form-group {
+			margin: 0;
+		}
+		.form-group,
+		.btn {
+			float: left;
+		}
+		.btn {
+			margin-left: 5px;
+		}
+		.form-group {
+			width: 70%;
+		}
+	}
+}
+
+// Navbar responsive
+@media (max-width: (@grid-float-breakpoint - 1)) {
+	.navbar-default {
+		background-color: transparent;
+	}
+	.navbar-toggle {
+		display: block;
+		width: 100%;
+		margin: 0;
+		float: none;
+		border: none;
+		font-weight: bold;
+		text-align: left;
+		color: @navbar-default-link-color;
+		background-color: @white;
+		font-size: (@font-size-base + 2);
+		&:hover,
+		&:focus {
+			color: @white;
+		}
+	}
+	.main-navigation .main-navigation-collapse.navbar-collapse {
+		border-top-width: 2px;
+		max-height: none;
+		.navbar-nav {
+			margin: 0;
+			border-radius: @border-radius-base;
+			background-color: @white;
+			& > li {
+				&:first-child a {
+					border-radius: @border-radius-base @border-radius-base 0 0;
+				}
+				&:last-child a {
+					border-radius: 0 0 @border-radius-base @border-radius-base;
+				}
+				& + li {
+					border-left: none;
+					border-top: 2px solid @body-bg;
+				}
+			}
+		}
+		.navbar-form {
+			margin: 0;
+			margin-top: 2px;
+			background-color: @white;
+			border-radius: @border-radius-base;
+			.clearfix();
+			.form-group {
+				margin: 0;
+			}
+			.form-group,
+			.btn {
+				float: left;
+			}
+			.btn {
+				margin-left: 10px;
+			}
+			.form-group {
+				width: 70%;
+			}
+		}
+		.badge {
+			top: 11px;
+			right: 10px;
+		}
+		.dropdown-menu .badge {
+			top: 6px;
+			left: auto;
+			right: 10px;
+		}
+	}
+	.dropdown-menu {
+		a {
+			color: @white;
+		}
+	}
+	.main-navigation.main-navigation-sidebar {
+		margin-bottom: @grid-gutter-width;
+	}
+
+	// Trun dropdown carets
+	.main-navigation .navbar-nav > .dropdown-menu .dropdown-submenu > a:after,
+	.main-navigation .navbar-nav > .open .dropdown-menu .dropdown-submenu > a:after {
+		margin-top: 10px;
+		border-width: @caret-width-base @caret-width-base 0;
+		border-color: @white transparent;
+	}
+}
+
+@media (min-width: @screen-xs) {
+	.main-navigation {
+		margin-top: (@template-logo-height + @base-margin + 10);
+	}
+}

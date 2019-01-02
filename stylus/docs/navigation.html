@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Navigation | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="../css/sangoma-red.css">
+
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery.js"><\/script>')</script>
+		<script src="js/libs/modernizr.js"></script>
+
+		<!-- IE8 support of media queries and CSS 2/3 selectors -->
+		<!--[if lt IE 9]>
+			<script src="../js/libs/respond.min.js"></script>
+			<script src="../js/libs/selectivizr.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-inverse pull-right"><span class="elusive icon-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+			</header>
+			<!-- /Main page header -->
+
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Navigation block -->
+					<div class="col-sm-3">
+						
+						<!-- Main navigation -->
+						<nav class="main-navigation main-navigation-sidebar navbar navbar-default" role="navigation">
+
+							<!-- Collapse navigation for mobile -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navigation-collapse">
+									<span class="elusive icon-align-justify"></span> Sangoma Template Documentation
+								</button>
+							</div>
+							<!-- /Collapse navigation for mobile -->
+
+							<!-- Navigation -->
+							<div class="main-navigation-collapse collapse navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li><a href="file-structure.html">File structure</a></li>
+									<li><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li><a href="data-blocks.html">Data blocks</a></li>
+									<li class="active"><a href="navigation.html">Navigation</a></li>
+									<li><a href="components.html">Components</a></li>
+									<li><a href="javascript.html">Javascript</a></li>
+									<li><a href="plugins.html">Plugins</a></li>
+								</ul>
+							</div>
+							<!-- /Navigation -->
+
+						</nav>
+						<!-- /Main navigation -->
+
+					</div>
+					<!-- /Navigation block -->
+					
+					<!-- Content block -->
+					<div class="col-sm-9">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="jumbotron red">
+									<h1><span class="icon-compass-alt"></span> Navigation</h1>
+									<p>Sangoma template come with two different types of navigation. Horizontal bar navigation on the top of the page and vertical navigation block on the side. Both navigation design patterns are able to display multi-level level child items.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>Main navigation bar</h2>
+									</header>
+									<section>
+										<p>Simply add your navigation content to an unordered list wrapped in <code>nav</code> tag.</p>
+										<p>Navigation dropdown is handled with Bootstrap Dropdown plugin with standard syntax.</p>
+<pre class="prettyprint lang-html">
+&lt;nav class="main-navigation navbar navbar-default" role="navigation"&gt;
+
+	&lt;!-- Collapse navigation for mobile --&gt;
+	&lt;div class="navbar-header"&gt;
+		&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navigation-collapse"&gt;
+			Collapsed navigation
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!-- /Collapse navigation for mobile --&gt;
+
+	&lt;!-- Navigation --&gt;
+	&lt;div class="main-navigation-collapse collapse navbar-collapse"&gt;
+
+		&lt;!-- Navigation items --&gt;
+		&lt;ul class="nav navbar-nav"&gt;
+
+			&lt;!-- Navigation items --&gt;
+			&lt;li&gt;
+				&lt;a href="#"&gt; ... &lt;/a&gt;
+			&lt;/li&gt;
+
+			&lt;!-- Link with second-level navigation --&gt;
+			&lt;li&gt;
+				&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; ... &lt;/a&gt;
+				&lt;ul class="dropdown-menu"&gt;
+					&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+
+			&lt;!-- Link with multi-level navigation --&gt;
+			&lt;li&gt;
+				&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; ... &lt;/a&gt;
+				&lt;ul class="dropdown-menu"&gt;
+					&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+
+					&lt;!-- 2nd level dropdown --&gt;
+					&lt;li class="dropdown-submenu"&gt;
+						&lt;a href="#"&gt; ... &lt;/a&gt;
+						&lt;ul class="dropdown-menu"&gt;
+							&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;!-- /2nd level dropdown --&gt;
+
+				&lt;/ul&gt;
+			&lt;/li&gt;
+
+		&lt;/ul&gt;
+
+	&lt;/div&gt;
+
+&lt;/nav&gt;
+</pre>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>Alernative navigation</h2>
+									</header>
+									<section>
+										<p>Template is very well combinable and you can use block widget and plans to build custom navigation. Since version 1.2 we do include alternative sidebar navigation. HTML markup is the same just add class <code>.main-navigation-sidebar</code>.</p>
+<pre class="prettyprint lang-html">
+&lt;nav class="main-navigation main-navigation-sidebar navbar navbar-default" role="navigation"&gt;
+
+	&lt;!-- Collapse navigation for mobile --&gt;
+	&lt;div class="navbar-header"&gt;
+		&lt;button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navigation-collapse"&gt;
+			Collapsed navigation
+		&lt;/button&gt;
+	&lt;/div&gt;
+	&lt;!-- /Collapse navigation for mobile --&gt;
+
+	&lt;!-- Navigation --&gt;
+	&lt;div class="main-navigation-collapse collapse navbar-collapse"&gt;
+
+		&lt;!-- Navigation items --&gt;
+		&lt;ul class="nav navbar-nav"&gt;
+
+			&lt;!-- Navigation items --&gt;
+			&lt;li&gt;
+				&lt;a href="#"&gt; ... &lt;/a&gt;
+			&lt;/li&gt;
+
+			&lt;!-- Link with second-level navigation --&gt;
+			&lt;li&gt;
+				&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; ... &lt;/a&gt;
+				&lt;ul class="dropdown-menu"&gt;
+					&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+
+			&lt;!-- Link with multi-level navigation --&gt;
+			&lt;li&gt;
+				&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt; ... &lt;/a&gt;
+				&lt;ul class="dropdown-menu"&gt;
+					&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+
+					&lt;!-- 2nd level dropdown --&gt;
+					&lt;li class="dropdown-submenu"&gt;
+						&lt;a href="#"&gt; ... &lt;/a&gt;
+						&lt;ul class="dropdown-menu"&gt;
+							&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/li&gt;
+					&lt;!-- /2nd level dropdown --&gt;
+
+				&lt;/ul&gt;
+			&lt;/li&gt;
+
+		&lt;/ul&gt;
+
+	&lt;/div&gt;
+
+&lt;/nav&gt;
+</pre>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>User profile</h2>
+									</header>
+									<section>
+										<p>For all user related data Sangoma comes with user profile block. Use class <code>.user-profile</code> and follow the markup to get block with user avatar image, name and optionaly actions.</p>
+<pre class="prettyprint lang-html">
+&lt;div class="user-profile"&gt;
+	&lt;figure&gt;
+		
+		&lt;!-- User profile avatar --&gt;
+		&lt;img src="..." alt="User name avatar"&gt;
+
+		&lt;!-- User profile info --&gt;
+		&lt;figcaption&gt;
+			&lt;strong&gt;
+				&lt;a href="#"&gt; User name &lt;/a&gt;
+			&lt;/strong&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="#"&gt; ... &lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/figcaption&gt;
+
+	&lt;/figure&gt;
+&lt;/div&gt;
+</pre>
+									</section>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- /Content block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+		</div>
+		<!-- /Full height wrapper -->
+
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://getbootstrap.com/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="http://support.walkingpixels.com/">Support</a></li>
+					<li><a href="http://getbootstrap.com/getting-started/">Documentation</a></li>
+					<li><a href="http://parallaq.com/">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-back-to-top" title="Back to top"><span class="elusive icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Google Prettify -->
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html&amp;skin=desert"></script>
+	</body>
+</html>

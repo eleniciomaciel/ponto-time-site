@@ -1,0 +1,130 @@
+//
+// Custom mixins
+// --------------------------------------------------
+
+
+// Complementary colors
+@base:                 #fff;
+@complement1:          spin(@base, 180);
+@complement2:          darken(spin(@base, 180), 5%);
+@lighten1:             lighten(@base, 15%);
+@lighten2:             lighten(@base, 30%);
+
+// Subtle colors
+@base:                 #fff;
+@lighter1:             lighten(spin(@base, 5), 10%);
+@lighter2:             lighten(spin(@base, 10), 20%);
+@darker1:              darken(spin(@base, -5), 10%);
+@darker2:              darken(spin(@base, -10), 20%);
+
+
+// Replace text with image
+.image-replacer(@path, @repeat, @height, @width) {
+	display: block;
+	background-image: url("@{path}");
+	background-repeat: @repeat;
+	.hide-text();
+	.size(@height, @width);
+}
+
+// Data block variants
+.data-block-variant(@background) {
+	header {
+		background: @background;
+		h2 + .btn li a,
+		h2 + .btn-group li a,
+		.data-header-actions li a {
+			color: mix(@background, @white, 50%);
+			background: darken(@background, 15%);
+		}
+		.header-search input {
+			color: mix(@background, @white, 50%);
+			background-color: darken(@background, 15%);
+		}
+	}
+}
+
+// Jumbotron variants
+.jumbotron-variant(@background; @text; @header) {
+	background: @background;
+	color: @text;
+	h1,
+	a:hover {
+		color: @header;
+	}
+}
+
+// Modal variants
+.modal-variant(@background; @text) {
+	.modal-header {
+		background-color: @background;
+	}
+	.modal-title,
+	.close {
+		color: @text;
+	}
+}
+
+// Dropdown variants
+.dropdown-variant(@background) {
+	background-color: @background;
+	.divider {
+		background-color: darken(@background, 10%);
+	}
+	> li > a,
+	> li > a:hover,
+	> li > a:focus {
+		color: @white;
+	}
+	> li > a:hover,
+	> li > a:focus {
+		background-color: darken(@background, 10%);
+	}
+	& > .active > a {
+		&,
+		&:hover,
+		&:focus {
+			color: @white;
+			background-color: darken(@background, 10%);
+		}
+	}
+	& > .disabled > a {
+		&,
+		&:hover,
+		&:focus {
+			color: darken(@background, 10%);
+		}
+	}
+	.dropdown-header {
+		color: @white;
+	}
+	.caret {
+		border-top: @caret-width-base solid @white;
+	}
+
+}
+
+// Pricing table variants
+.pricing-table-variant(@background) {
+	background-color: darken(@background, 10%);
+	.panel-heading {
+		color: mix(@background, @white, 50%);
+		background-color: @background;
+	}
+	.panel-body strong {
+		color: @white;
+		padding: (@base-margin / 2);
+	}
+	.list-group-item {
+		color: mix(@background, @white, 30%);
+		border-color: darken(@background, 10%);
+		background-color: @background;
+		.elusive,
+		.glyphicons {
+			color: @white;
+		}
+	}
+	& > .list-group .list-group-item:last-child {
+		border-bottom: 1px solid darken(@background, 10%);
+	}
+}

@@ -1,0 +1,95 @@
+//
+// Sangoma dropdowns
+// --------------------------------------------------
+
+
+// Restyle default dropdowns
+.dropdown-menu {
+	border: none;
+	.box-shadow(none);
+	& > li {
+		position: relative;
+	}
+	& > li > a {
+		font-weight: bold;
+	}
+	.divider {
+		height: 2px;
+		margin: 5px 0;
+	}
+
+	// Dropdown color variants
+	&.dropdown-primary {
+		.dropdown-variant(@template-color);
+	}
+	&.dropdown-red {
+		.dropdown-variant(@sangoma-red);
+	}
+	&.dropdown-blue {
+		.dropdown-variant(@sangoma-blue);
+	}
+	&.dropdown-green {
+		.dropdown-variant(@sangoma-green);
+	}
+	&.dropdown-orange {
+		.dropdown-variant(@sangoma-orange);
+	}
+	&.dropdown-purple {
+		.dropdown-variant(@sangoma-purple);
+	}
+	&.dropdown-turquoise {
+		.dropdown-variant(@sangoma-turquoise);
+	}
+	&.dropdown-gray {
+		.dropdown-variant(@sangoma-gray);
+	}
+	&.dropdown-dark {
+		.dropdown-variant(@sangoma-dark);
+	}
+}
+
+// Restyle dropdown header
+.dropdown-header {
+	font-weight: bold;
+}
+
+// Multi-level dropdown
+.dropdown-submenu {
+	position: relative;
+	& >.dropdown-menu { 
+		top: 0;
+		left: 100%;
+		margin-top: -6px;
+		margin-left: -1px;
+		border-radius: 0 @border-radius-base @border-radius-base @border-radius-base;
+	}
+	& > a:after {
+		display: block;
+		content: " ";
+		float: right;
+		width: 0;
+		height: 0;
+		border-color: transparent;
+		border-style: solid;
+		border-width: @caret-width-base 0 @caret-width-base @caret-width-base;
+		border-left-color: @dropdown-caret-color;
+		margin-top: 6px;
+		margin-right: -10px;
+	}
+	&:hover {
+		& > .dropdown-menu {
+			display: block;
+		}
+		& > a:after {
+			border-left-color: @dropdown-caret-color;
+		}
+	}
+	&.pull-left {
+		float: none;
+		& > .dropdown-menu {
+			left: -100%;
+			margin-left: 10px;
+			border-radius: @border-radius-base 0 @border-radius-base @border-radius-base;
+		}
+	}
+}

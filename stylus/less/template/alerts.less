@@ -1,0 +1,35 @@
+//
+// Sangoma alerts
+// --------------------------------------------------
+
+
+// Overwrite default link style and close button
+.alert {
+	.alert-link {
+		text-decoration: dashed;
+	}
+	.close {
+		color: @white;
+		text-shadow: none;
+		.opacity(0.5);
+		&:hover,
+		&:focus {
+			color: @white;
+			.opacity(0.8);
+		}
+	}
+}
+
+// Top page alerts don't need to have border radius and bottom margin
+#wrapper > .alert {
+	margin-bottom: 0;
+	border-radius: 0;
+}
+
+// Two more alternate styles
+.alert-gray {
+	.alert-variant(@sangoma-silver; @sangoma-silver; darken(@sangoma-gray, 5%));
+}
+.alert-inverse {
+	.alert-variant(@sangoma-dark; @sangoma-dark; @white);
+}

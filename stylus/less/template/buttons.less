@@ -1,0 +1,74 @@
+//
+// Sangoma buttons
+// --------------------------------------------------
+
+
+// Add inverse button style
+.btn-inverse {
+  .button-variant(@white; @sangoma-dark; @sangoma-dark);
+}
+
+// Rewrite .button-variant() mixin hover
+.btn-default {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-default-border, 8%);
+	}
+}
+.btn-primary {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-primary-border, 8%);
+	}
+}
+.btn-warning {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-warning-border, 8%);
+	}
+}
+.btn-danger {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-danger-border, 8%);
+	}
+}
+.btn-success {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-success-border, 8%);
+	}
+}
+.btn-info {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@btn-info-border, 8%);
+	}
+}
+.btn-inverse {
+	&:hover,
+	&:focus,
+	&:active,
+	&.active,
+	.open .dropdown-toggle& {
+		border-color: darken(@sangoma-dark, 8%);
+	}
+}

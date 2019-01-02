@@ -1,0 +1,66 @@
+//
+// Sangoma user profile
+// --------------------------------------------------
+
+
+.user-profile {
+	margin: @base-margin 0 0 0;
+	.clearfix();
+	figure {
+		margin: 0;
+		.clearfix();
+	}
+	img {
+		float: left;
+		border-radius: @border-radius-base;
+		.square(40px);
+	}
+	figcaption {
+		float: left;
+		margin-left: (@base-margin / 2);
+		strong {
+			display: block;
+			font-size: (@font-size-base + 2);
+			line-height: (@font-size-base + 4);
+			a {
+				color: darken(@sangoma-silver, 20%);
+				&:hover {
+					color: @template-color;
+					text-decoration: none;
+				}
+			}
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			.clearfix();
+			& > li {
+				float: left;
+				display: block;
+				a {
+					color: darken(@sangoma-silver, 10%);
+					&:hover {
+						color: @template-color;
+						text-decoration: none;
+					}
+				}
+				& + li {
+					margin-left: 8px;
+				}
+			}
+		}
+	}
+}
+
+// Responsive
+@media (min-width: @screen-xs) {
+	.user-profile {
+		float: right;
+		margin: ((@template-logo-height - 40) / 2) 0 0; // Logo height - user profile / 2 to get user profile in vertical center 
+		figure,
+		figcaption {
+			float: right;
+		}
+	}
+}

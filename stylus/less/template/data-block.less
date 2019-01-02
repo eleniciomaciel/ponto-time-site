@@ -1,0 +1,76 @@
+//
+// Sangoma data blocks
+// --------------------------------------------------
+
+
+// General styles for data blocks
+.data-block {
+	position: relative;
+	margin-bottom: @grid-gutter-width;
+	background: @white;
+	border-radius: @border-radius-large;
+	section {
+		padding: @base-margin;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		& > *:first-child {
+			margin-top: 0;
+		}
+	}
+}
+	
+// Data block color variants - see custom/mixnis.less
+.data-block {
+	&.turquoise {
+		.data-block-variant(@sangoma-turquoise);
+	}
+	&.orange {
+		.data-block-variant(@sangoma-orange);
+	}
+	&.purple {
+		.data-block-variant(@sangoma-purple);
+	}
+	&.green {
+		.data-block-variant(@sangoma-green);
+	}
+	&.blue {
+		.data-block-variant(@sangoma-blue);
+	}
+	&.red {
+		.data-block-variant(@sangoma-red);
+	}
+	&.gray {
+		.data-block-variant(@sangoma-gray);
+	}
+	&.dark {
+		.data-block-variant(@sangoma-dark);
+	}
+}
+
+// Data block header
+.data-block header {
+	padding: (@base-margin / 2) (@base-margin / 2) (@base-margin / 2) (@base-margin - 5);
+	background: @template-color;
+	.border-top-radius(@border-radius-large);
+	.clearfix();
+	h2 {
+		margin: 0;
+		color: @white;
+		display: inline-block;
+		font-size: @font-size-large;
+		line-height: 28px;
+	}
+}
+
+// Data block footer
+.data-block footer {
+	color: darken(@sangoma-silver, 30%);
+	font-size: @font-size-small;
+	padding: @base-margin / 2;
+	background: @sangoma-silver;
+	.border-bottom-radius(@border-radius-large);
+	p {
+		margin: 0;
+	}
+}

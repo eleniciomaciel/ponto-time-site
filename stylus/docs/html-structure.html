@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>HTML structure | Sangoma Bootstrap Admin Template Documentation</title>
+		<meta name="description" content="">
+		<meta name="author" content="Walking Pixels | www.walkingpixels.com">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="../css/sangoma-blue.css">
+
+		<!-- JS Libs -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../js/libs/jquery.js"><\/script>')</script>
+		<script src="js/libs/modernizr.js"></script>
+
+		<!-- IE8 support of media queries and CSS 2/3 selectors -->
+		<!--[if lt IE 9]>
+			<script src="../js/libs/respond.min.js"></script>
+			<script src="../js/libs/selectivizr.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body>
+		
+		<!-- Full height wrapper -->
+		<div id="wrapper">
+
+			<!-- Main page header -->
+			<header id="header" class="container">
+
+				<h1>
+					<!-- Main page logo -->
+					<a href="login.html">Sangoma</a>
+					
+					<!-- Main page headline -->
+					<span>A flat Bootstrap admin template</span>
+				</h1>
+
+				<!-- User profile (Back button) -->
+				<div class="user-profile">
+
+					<!-- Back button -->
+					<a href="../index.html" class="btn btn-inverse pull-right"><span class="elusive icon-chevron-left"></span> Back to template</a>
+
+				</div>
+				<!-- /User profile (Back button) -->
+
+			</header>
+			<!-- /Main page header -->
+
+			<!-- Main page container -->
+			<section class="container" role="main">
+
+				<!-- Grid row -->
+				<div class="row">
+					
+					<!-- Navigation block -->
+					<div class="col-sm-3">
+						
+						<!-- Main navigation -->
+						<nav class="main-navigation main-navigation-sidebar navbar navbar-default" role="navigation">
+
+							<!-- Collapse navigation for mobile -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-navigation-collapse">
+									<span class="elusive icon-align-justify"></span> Sangoma Template Documentation
+								</button>
+							</div>
+							<!-- /Collapse navigation for mobile -->
+
+							<!-- Navigation -->
+							<div class="main-navigation-collapse collapse navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li><a href="index.html">Introduction</a></li>
+									<li><a href="installation.html">Installation</a></li>
+									<li><a href="file-structure.html">File structure</a></li>
+									<li class="active"><a href="html-structure.html">HTML structure</a></li>
+									<li><a href="grid.html">Grid</a></li>
+									<li><a href="data-blocks.html">Data blocks</a></li>
+									<li><a href="navigation.html">Navigation</a></li>
+									<li><a href="components.html">Components</a></li>
+									<li><a href="javascript.html">Javascript</a></li>
+									<li><a href="plugins.html">Plugins</a></li>
+								</ul>
+							</div>
+							<!-- /Navigation -->
+
+						</nav>
+						<!-- /Main navigation -->
+
+					</div>
+					<!-- /Navigation block -->
+					
+					<!-- Content block -->
+					<div class="col-sm-9">
+
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="jumbotron blue">
+									<h1><span class="elusive icon-pencil-alt"></span> HTML structure</h1>
+									<p>Sangoma template is a fixed layout container with full 12col Bootstrap grid.</P>
+									<p>The best way how to get familiar with each element is to take a look at code itself. Every party is well documented and in combination with origianl Bootstrap documentation you should't get lost.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>Standard layout</h2>
+									</header>
+									<section>
+<pre class="prettyprint lang-html">
+&lt;div id="wrapper"&gt;
+
+	&lt;!-- Main page header --&gt;
+	&lt;header id="header" class="container"&gt;
+
+		&lt;h1&gt;
+
+			&lt;!-- Main page logo --&gt;
+			&lt;a href="#"&gt;Logo&lt;/a&gt;
+
+			&lt;p&gt;&lt;!-- page headline --&gt;&lt;/p&gt;
+
+		&lt;/h1&gt;
+
+
+		&lt;!-- User profile --&gt;
+		&lt;div class="user-profile"&gt;
+
+			...
+
+		&lt;/div&gt;
+
+		&lt;!-- Main navigation --&gt;
+		&lt;nav class="main-navigation-collapse collapse navbar-collapse" role="navigation"&gt;
+
+			...
+
+		&lt;/nav&gt;
+
+	&lt;/header&gt;
+	&lt;!-- /Main page header --&gt;
+
+	&lt;!-- Main page container --&gt;
+	&lt;section class="container" role="main"&gt;
+
+		&lt;!-- Page header --&gt;
+		&lt;article class="page-header"&gt;
+			...
+		&lt;/article&gt;
+
+		&lt;!-- Grid row --&gt;
+		&lt;div class="row"&gt;
+
+			&lt;!-- Data block --&gt;
+			&lt;article class="col-sm-X"&gt;
+				&lt;div class="data-block"&gt;
+					&lt;header&gt;
+						...
+					&lt;/header&gt;
+					&lt;section&gt;
+						...
+					&lt;/section&gt;
+					&lt;footer&gt;
+						...
+					&lt;/footer&gt;
+				&lt;/div&gt;
+			&lt;/article&gt;
+
+		&lt;/div&gt;
+
+	&lt;/section&gt;
+	&lt;!-- /Main page container --&gt;
+
+	&lt;!-- Sticky footer push --&gt;
+	&lt;div id="push"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- Full height wrapper --&gt;
+
+&lt;!-- Main page footer --&gt;
+&lt;footer id="footer" class="container"&gt;
+	...
+&lt;/footer&gt;
+</pre>
+									</section>
+								</div>
+							</article>
+							<article class="col-sm-12">
+								<div class="data-block">
+									<header>
+										<h2>Alternative navigation layout</h2>
+									</header>
+									<section>
+<pre class="prettyprint lang-html">
+&lt;div id="wrapper"&gt;
+
+	&lt;!-- Main page header --&gt;
+	&lt;header id="header" class="container"&gt;
+
+		&lt;h1&gt;
+
+			&lt;!-- Main page logo --&gt;
+			&lt;a href="#"&gt;Logo&lt;/a&gt;
+
+			&lt;p&gt;&lt;!-- page headline --&gt;&lt;/p&gt;
+
+		&lt;/h1&gt;
+
+
+		&lt;!-- User profile --&gt;
+		&lt;div class="user-profile"&gt;
+
+			...
+
+		&lt;/div&gt;
+
+	&lt;/header&gt;
+	&lt;!-- /Main page header --&gt;
+
+	&lt;!-- Main page container --&gt;
+	&lt;section class="container" role="main"&gt;
+
+		&lt;!-- Grid row --&gt;
+		&lt;div class="row"&gt;
+
+			&lt;!-- Navigation block --&gt;
+			&lt;div class="col-sm-3"&gt;
+
+				&lt;!-- Main navigation --&gt;
+				&lt;nav class="main-navigation-collapse collapse navbar-collapse" role="navigation"&gt;
+
+					...
+
+				&lt;/nav&gt;
+
+			&lt;/div&gt;
+
+			&lt;!-- Content block --&gt;
+			&lt;div class="col-sm-3"&gt;
+
+				&lt;!-- Page header --&gt;
+				&lt;article class="page-header"&gt;
+					...
+				&lt;/article&gt;
+
+				&lt;!-- Grid row --&gt;
+				&lt;div class="row"&gt;
+
+					&lt;!-- Data block --&gt;
+					&lt;article class="col-sm-X"&gt;
+						&lt;div class="data-block"&gt;
+							&lt;header&gt;
+								...
+							&lt;/header&gt;
+							&lt;section&gt;
+								...
+							&lt;/section&gt;
+							&lt;footer&gt;
+								...
+							&lt;/footer&gt;
+						&lt;/div&gt;
+					&lt;/article&gt;
+
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+		&lt;/div&gt;
+
+	&lt;/section&gt;
+	&lt;!-- /Main page container --&gt;
+
+	&lt;!-- Sticky footer push --&gt;
+	&lt;div id="push"&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;!-- Full height wrapper --&gt;
+
+&lt;!-- Main page footer --&gt;
+&lt;footer id="footer" class="container"&gt;
+	...
+&lt;/footer&gt;
+</pre>
+									</section>
+								</div>
+							</article>
+						</div>
+					</div>
+					<!-- /Content block -->
+					
+				</div>
+				<!-- /Grid row -->
+
+			</section>
+			<!-- /Main page container -->
+			
+		</div>
+		<!-- /Full height wrapper -->
+
+		<!-- Main page footer -->
+		<footer id="footer">
+			<div class="container">
+
+				<!-- Footer info -->
+				<p>Built with love on <a href="http://getbootstrap.com/">Twitter Bootstrap</a> by <a href="http://www.walkingpixels.com">Walking Pixels</a></p>
+
+				<!-- Footer nav -->
+				<ul>
+					<li><a href="http://support.walkingpixels.com/">Support</a></li>
+					<li><a href="http://getbootstrap.com/getting-started/">Documentation</a></li>
+					<li><a href="http://parallaq.com/">API</a></li>
+				</ul>
+				<!-- /Footer nav -->
+
+				<!-- Footer back to top -->
+				<a href="#top" class="btn btn-back-to-top" title="Back to top"><span class="elusive icon-arrow-up"></span></a>
+
+			</div>
+		</footer>
+		<!-- /Main page footer -->
+
+		<script src="../js/bootstrap/bootstrap.min.js"></script>
+
+		<!-- Google Prettify -->
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+		<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=html&amp;skin=desert"></script>
+	</body>
+</html>

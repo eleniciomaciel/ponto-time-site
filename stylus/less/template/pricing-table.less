@@ -1,0 +1,70 @@
+//
+// Sangoma pricing table
+// --------------------------------------------------
+
+
+.pricing-table {
+	background-color: darken(@sangoma-white, 10%);
+	border-radius: @border-radius-base;
+	.panel-heading,
+	.panel-body {
+		text-align: center;
+	}
+	.panel-heading {
+		padding: (@base-margin * 0.75);
+		color: @sangoma-gray;
+		background-color: @sangoma-white;
+		.border-top-radius(@border-radius-base);
+		h3 {
+			margin: 0;
+			text-transform: uppercase;
+			font-size: @font-size-base;
+		}
+	}
+	.panel-body strong {
+		color: @sangoma-gray;
+		font-size: (@font-size-large * 1.5);
+		line-height: 1;
+		display: block;
+		padding: (@base-margin / 2);
+	}
+	.list-group-item {
+		color: @sangoma-gray;
+		border-color: darken(@sangoma-white, 10%);
+		background-color: @sangoma-white;
+		.elusive,
+		.glyphicons {
+			color: @sangoma-gray;
+		}
+	}
+	& > .list-group .list-group-item:last-child {
+		border-bottom: 1px solid darken(@sangoma-white, 10%);
+		border-radius: 0;
+	}
+	.panel-footer {
+		background-color: transparent;
+	}
+
+	// Color variants
+	&.pricing-table-red {
+		.pricing-table-variant(@sangoma-red);
+	}
+	&.pricing-table-blue {
+		.pricing-table-variant(@sangoma-blue);
+	}
+	&.pricing-table-green {
+		.pricing-table-variant(@sangoma-green);
+	}
+	&.pricing-table-purple {
+		.pricing-table-variant(@sangoma-purple);
+	}
+	&.pricing-table-orange {
+		.pricing-table-variant(@sangoma-orange);
+	}
+	&.pricing-table-turquoise {
+		.pricing-table-variant(@sangoma-turquoise);
+	}
+	&.pricing-table-dark {
+		.pricing-table-variant(@sangoma-dark);
+	}
+}

@@ -1,0 +1,31 @@
+//
+// Sangoma breadcrumbs
+// --------------------------------------------------
+
+
+// Overwrite general breadcrumb style
+.breadcrumb {
+	display: block;
+	margin-bottom: @grid-gutter-width;
+	& > li {
+		font-weight: bold;
+	}
+	a {
+		font-weight: bold;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// Breadcrumbs inside data block
+.data-block .breadcrumb {
+	background: @body-bg;
+	margin-bottom: @base-margin;
+	& > .active {
+		color: darken(@body-bg, 30%);
+	}
+	& > li + li:before {
+		color: darken(@body-bg, 15%);
+	}
+}

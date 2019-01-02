@@ -1,0 +1,70 @@
+//
+// Sangoma special data blocks 
+// --------------------------------------------------
+
+
+// Data block panel
+.data-block {
+	&.panel-group {
+		background-color: transparent;
+	}
+	&.panel-group.panel-group-collapsed {
+		background-color: @white;
+		.panel + .panel {
+			border-color: @body-bg;
+		}
+	}
+}
+
+// Data block todo list
+.data-block.todo-block {
+	form,
+	table {
+		margin: 0;
+	}
+	table th,
+	table td {
+		border-left: none;
+	}
+	table td:first-child {
+		width: 13px;
+	}
+	table tr {
+		&.done {
+			.transition(all 300ms ease);
+			.opacity(0.4);
+			p {
+				text-decoration: line-through;
+				& + span {
+					height: 0;
+					.transition(all 300ms ease);
+					.opacity(0);
+				}
+			}
+			&:hover {
+				.opacity(1);
+				p {
+					text-decoration: none;
+					& + span {
+						height: auto;
+						.opacity(1);
+					}
+				}
+			}
+		}
+		p {
+			margin: 0;
+			color: darken(@sangoma-gray, 15%);
+			font-weight: bold;
+			line-height: normal;
+			& + span {
+				display: block;
+				font-size: @font-size-small;
+				color: @sangoma-gray;
+			}
+		}
+		input {
+			margin-top: -3px;
+		}
+	}
+}

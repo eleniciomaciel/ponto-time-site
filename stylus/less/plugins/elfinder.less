@@ -1,0 +1,168 @@
+//
+// Plugin: ElFinder
+// --------------------------------------------------
+
+
+// jQuery ElFinder */
+@elfinder-image-path:                             "../img/plugins/elFinder";
+.elfinder {
+	border: none;
+	border-radius: 2px;
+	.elfinder-navbar {
+		height: 100%;
+		background: @sangoma-silver;
+		.ui-state-hover {
+			background: transparent;
+			border-color: transparent;
+		}
+		.ui-state-active {
+			color: @gray-lighter;
+			background: @sangoma-gray;
+			border: none;
+		}
+	}
+	.elfinder-navbar,
+	.elfinder-cwd {
+		padding: (@base-margin - 5) @base-margin;
+	}
+	.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+	.elfinder-cwd table td.ui-state-hover,
+	.elfinder-button-menu .ui-state-hover {
+		color: @white;
+		background: @template-color;
+	}
+	.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover {
+		background: @gray-lighter;
+	}
+	.elfinder-cwd table tr {
+		&:nth-child(odd) {
+			background-color: #f8f8f8;
+		}
+	}
+	.elfinder-workzone {
+		background: @body-bg;
+		border: none;
+		border-radius: 0 0 @border-radius-large @border-radius-large;
+	}
+	.elfinder-statusbar {
+		color: @gray;
+		a {
+			text-decoration: none;
+			color: @gray;
+		}
+		&.ui-widget-header {
+			background-color: transparent;
+		}
+	}
+	.elfinder-buttonset {
+		margin: 0 (@base-margin / 2) 0 0;
+		background: none;
+		border: none;
+		.elfinder-button {
+			background: none;
+			width: auto !important;
+			height: auto !important;
+			.btn;
+			.btn-inverse;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.elfinder-button-search.elfinder-button {
+		width: 191px;
+		margin: 0;
+		input {
+			margin: 0;
+			padding-left: (@base-margin + 5);
+			border: none;
+			height: 30px;
+			width: 190px;
+			border-radius: @border-radius-base;
+		}
+	}
+}
+.elfinder-disabled {
+	.elfinder-navbar {
+		.ui-state-active {
+			color: @sangoma-dark;
+			background: darken(@sangoma-silver, 8%);
+			border: none;
+		}
+	}
+	.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+	.elfinder-cwd table td.ui-state-hover {
+		background: lighten(@gray-light, 15%);
+	}
+}
+.elfinder-contextmenu .ui-state-hover {
+	background: #3875d7;
+	color: #fff;
+	.elfinder-contextmenu-arrow {
+		background-image: url("@{elfinder-image-path}/arrows-active.png");
+	}
+}
+#elfinder .elfinder-cwd-view-icons .elfinder-cwd-file {
+	width: 120px;
+	height: 95px;
+}
+.elfinder-resize-handle-vline {
+	background-image: url("@{elfinder-image-path}/crop.gif");
+}
+.elfinder-resize-spinner,
+.elfinder-notify-progress {
+	background-image: url("@{elfinder-image-path}/progress.gif");
+}
+.elfinder-help-logo {
+	background-image: url("@{elfinder-image-path}/logo.png");
+}
+.elfinder-perms,
+.elfinder-symlink,
+.elfinder-drag-helper-icon-plus,
+.elfinder-navbar-icon,
+.elfinder-quicklook .ui-resizable-se,
+.elfinder-button-icon,
+.elfinder-menu-item-sort-dir {
+	background-image: url("@{elfinder-image-path}/toolbar.png");
+}
+.elfinder-contextmenu-arrow,
+.elfinder-navbar-arrow,
+.ui-state-active .elfinder-navbar-arrow {
+	background-image: url("@{elfinder-image-path}/arrows-normal.png");
+}
+.elfinder-navbar .ui-resizable-handle {
+	background-image: url("@{elfinder-image-path}/resize.png");
+}
+.elfinder-cwd-icon {
+	background-image: url("@{elfinder-image-path}/icons-big.png");
+}
+.elfinder-cwd-view-list td .elfinder-cwd-icon {
+	background-image: url("@{elfinder-image-path}/icons-small.png");
+}
+.elfinder-dialog-icon {
+	background-image: url("@{elfinder-image-path}/dialogs.png");
+}
+.elfinder-info-spinner,
+.elfinder-navbar-spinner {
+	background-image: url("@{elfinder-image-path}/spinner-mini.gif");
+}
+.elfinder-quicklook {
+	background-image: url("@{elfinder-image-path}/quicklook-bg.png");
+}
+.elfinder-quicklook-navbar-icon {
+	background-image: url("@{elfinder-image-path}/quicklook-icons.png");
+}
+
+// Custom elFinder jquery UI
+.elfinder {
+	.ui-widget-header {
+		padding: (@base-margin - 5) @base-margin;
+		background: @sangoma-gray;
+		border: none;
+		border-radius: @border-radius-large @border-radius-large 0 0;
+	}
+	.ui-widget-content {
+		border-color: @sangoma-gray;
+		background: none;
+	}
+}

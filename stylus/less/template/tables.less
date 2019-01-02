@@ -1,0 +1,81 @@
+//
+// Sangoma tables
+// --------------------------------------------------
+
+
+// Restyle default tables
+.table {
+	background-color: @sangoma-white;
+	border: 2px solid @white;
+	border-collapse: separate;
+	*border-collapse: collapsed;
+	border-left: 0;
+	border-radius: @border-radius-base;
+	th {
+		text-align: center;
+		background-color: @sangoma-silver;
+	}
+	th,
+	td {
+		border-top: 2px solid @white;
+		border-left: 2px solid @white;
+	}
+	caption + thead tr:first-child th,
+	caption + tbody tr:first-child th,
+	caption + tbody tr:first-child td,
+	colgroup + thead tr:first-child th,
+	colgroup + tbody tr:first-child th,
+	colgroup + tbody tr:first-child td,
+	thead:first-child tr:first-child th,
+	tbody:first-child tr:first-child th,
+	tbody:first-child tr:first-child td {
+		border-top: 0;
+	}
+	thead:first-child tr:first-child th:first-child,
+	tbody:first-child tr:first-child td:first-child {
+		border-top-left-radius: @border-radius-base;
+	}
+	thead:first-child tr:first-child th:last-child,
+	tbody:first-child tr:first-child td:last-child {
+		border-top-right-radius: @border-radius-base;
+	}
+	thead:last-child tr:last-child th:first-child,
+	tbody:last-child tr:last-child td:first-child {
+		border-radius: 0 0 0 @border-radius-base;
+	}
+	thead:last-child tr:last-child th:last-child,
+	tbody:last-child tr:last-child td:last-child {
+		border-bottom-right-radius: @border-radius-base;
+	}
+}
+
+// Media table style
+.table-media {
+	tr td {
+		vertical-align: middle;
+	}
+	tr td:first-child,
+	tr th:first-child {
+		width: 20px;
+		text-align: center;
+	}
+	.thumbnail {
+		display: table-cell;
+		width: 45px;
+		border-right: none;
+		border-bottom: none;
+		border-radius: 0;
+		.box-shadow(none);
+	}
+	input[type="checkbox"] {
+		margin-top: 0;
+	}
+}
+
+// Special style for toolbars in table
+.table .toolbar {
+	padding: 4px;
+}
+.toolbar.toolbar-btn-link {
+	padding: 0;
+}

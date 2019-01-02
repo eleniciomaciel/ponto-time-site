@@ -1,0 +1,126 @@
+//
+// Sangoma panels
+// --------------------------------------------------
+
+
+// Overwrite default panel styles
+.panel {
+	border: none;
+	.box-shadow(none);
+}
+.panel-heading {
+	padding: 0;
+}
+.panel-title {
+	& > a {
+		display: block;
+		padding: 10px 15px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// Panel groups
+.panel-group {
+	 .panel-heading + .panel-collapse .panel-body {
+	 	border: none;
+	 }
+
+	// Grouped panels
+	&.panel-group-collapsed {
+		.panel + .panel {
+			margin-top: 0;
+			border-top: 1px solid @white;
+		}
+		.panel {
+			border-radius: 0;
+			.panel-heading .panel-title > a.accordion-toggle,
+			.panel-heading {
+				border-radius: 0;
+			}
+			&:first-child,
+			&:first-child .panel-heading,
+			&:first-child .panel-title > a {
+				.border-top-radius(@panel-border-radius);
+			}
+			&:last-child,
+			&:last-child .panel-heading,
+			&:last-child .panel-title > a {
+				.border-bottom-radius(@panel-border-radius);
+			}
+		}
+	}
+}
+
+// Panel variants
+.panel-default .panel-title > a {
+	background: @panel-default-heading-bg;
+	&:hover {
+		color: @white;
+		background-color: @template-color;
+	}
+}
+.panel-primary .panel-title > a {
+	background: @panel-primary-heading-bg;
+	&:hover {
+		background-color: darken(@panel-primary-heading-bg, 8%);
+	}
+}
+.panel-success .panel-title > a {
+	background: @panel-success-heading-bg;
+	&:hover {
+		background-color: darken(@panel-success-heading-bg, 8%);
+	}
+}
+.panel-warning .panel-title > a {
+	background: @panel-warning-heading-bg;
+	&:hover {
+		background-color: darken(@panel-warning-heading-bg, 8%);
+	}
+}
+.panel-danger .panel-title > a {
+	background: @panel-danger-heading-bg;
+	&:hover {
+		background-color: darken(@panel-danger-heading-bg, 8%);
+	}
+}
+.panel-info .panel-title > a {
+	background: @panel-info-heading-bg;
+	&:hover {
+		background-color: darken(@panel-info-heading-bg, 8%);
+	}
+}
+
+// Add dark variant
+.panel-inverse {
+	.panel-variant(@sangoma-dark; @white; @sangoma-dark; @sangoma-dark);
+	.panel-title > a {
+		background: @sangoma-dark;
+		&:hover {
+			background-color: darken(@sangoma-dark, 8%);
+		}
+	}
+}
+
+// Add purple variant
+.panel-purple {
+	.panel-variant(@sangoma-purple; @white; @sangoma-purple; @sangoma-purple);
+	.panel-title > a {
+		background: @sangoma-purple;
+		&:hover {
+			background-color: darken(@sangoma-purple, 8%);
+		}
+	}
+}
+
+// Add turquoise variant
+.panel-turquoise {
+	.panel-variant(@sangoma-turquoise; @white; @sangoma-turquoise; @sangoma-turquoise);
+	.panel-title > a {
+		background: @sangoma-turquoise;
+		&:hover {
+			background-color: darken(@sangoma-turquoise, 8%);
+		}
+	}
+}

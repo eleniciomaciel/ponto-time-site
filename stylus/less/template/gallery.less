@@ -1,0 +1,50 @@
+//
+// Sangoma gallery
+// --------------------------------------------------
+
+
+// Custom gallery styling
+.gallery {
+	& + .gallery {
+		margin-top: @grid-gutter-width;
+	}
+
+	// Thumbnails
+	.thumbnail {
+		margin-bottom: @grid-gutter-width;
+	}
+
+	// Thumbnail action bar
+	.thumbnail-actions {
+		position: absolute;
+		bottom: 10px;
+		right: 20px;
+		.opacity(0);
+	}
+	& > div:hover .thumbnail-actions {
+		.opacity(1);
+	}
+
+	// Thumbnail checkbox
+	.thumbnail-checkbox {
+		margin: 0;
+		position: absolute;
+		top: 5px;
+		left: 15px;
+	}
+}
+
+// Form gallery
+.form-gallery {
+	.thumbnail.active {
+		border-color: @template-color;
+		background-color: @template-color;
+	}
+}
+
+// Gallery responsive
+@media (min-width: @grid-float-breakpoint) {
+	.gallery  .thumbnail {
+		margin-bottom: 0;
+	}
+}

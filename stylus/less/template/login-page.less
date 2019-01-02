@@ -1,0 +1,118 @@
+//
+// Sangoma login page
+// --------------------------------------------------
+
+
+body.login {
+	padding: @base-margin;
+	background: @template-color;
+
+	// Login container
+	.container {
+		width: 100%;
+		padding: 0;
+		padding-top: 20px;
+		
+
+		// Login page header
+		.login-logo {
+			width: 100%;
+			margin: (@base-margin * 2) 0 (@base-margin * 2);
+
+			// Login page logo
+			a {
+				.hide-text();
+				width: 100%;
+				min-height: 100px;
+				display: block;
+				background-image: url("@{template-login-logo}");
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+
+			// Login page welcome message
+			h1 {
+				color: @white;
+				font-size: (@font-size-large - 1);
+				line-height: normal;
+				text-align: center;
+			}
+		}
+
+		// Login form
+		form {
+			width: 100%;
+			background-color: @white;
+			padding: @base-margin;
+			position: relative;
+			border-radius: @border-radius-base;
+
+			// Right triangel
+			&:before {
+				border-color: transparent transparent @white transparent;
+				border-style: solid;
+				border-width: 12px;
+				content: "";
+				height: 0;
+				left: 47%;
+				top: -24px;
+				position: absolute;
+				width: 0;
+			}
+
+			// Login inputs
+			input[type="text"],
+			input[type="password"] {
+				font-weight: bold;
+				background-color: @sangoma-gray-light;
+			}
+
+			// Login button
+			.btn {
+				margin-top: (@base-margin * 0.75);
+			}
+
+			// Lost password
+			.lost-password {
+				color: @gray-light;
+				display: block;
+				font-size: 13px;
+				margin-top: (@base-margin * 0.5);
+				text-align: center;
+			}
+		}
+	}
+}
+
+// Responsive
+@media (min-width: @screen-xs) {
+	body.login {
+		padding: 220px 0 0 0;
+		.container {
+			width: 460px;
+			.login-logo {
+				width: 100px;
+				float: left;
+				margin: 0;
+				a {
+					width: 100px;
+					height: 100px;
+					background-position: left center;
+				}
+				h1 {
+					text-align: left;
+				}
+			}
+			form {
+				float: right;
+				width: 320px;
+				&:before {
+					border-color: transparent @white transparent transparent;
+					border-width: 12px 12px 12px 0;
+					left: -12px;
+					top: 30px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+//
+// Sangoma main footer
+// --------------------------------------------------
+
+
+// Button
+
+#footer {
+	color: darken(@sangoma-silver, 30%);
+	height: auto;
+	background: @sangoma-silver;
+	.clearfix();
+
+	// Footer copyright text
+	p {
+		margin: 15px 10px 0 0;
+		float: left;
+	}
+
+	// Footer links
+	a {
+		color: @gray;
+		.transition(color 350ms ease);
+		&:hover {
+			color: @gray;
+		}
+	}
+
+	// Footer navigation
+	ul {
+		margin: 15px 0;
+		padding: 0;
+		list-style: none;
+		float: left;
+		.clearfix();
+		li {
+			float: left;
+			display: block;
+			& + li {
+				margin-left: 10px;
+			}
+		}
+	}
+
+	// Footer back to top button
+	.btn.btn-back-to-top {
+		float: right;
+		color: @sangoma-silver;
+		margin-top: 14px;
+		padding: 2px 5px;
+		font-size: @font-size-small;
+		background: @sangoma-gray;
+		&:hover {
+			background: @sangoma-white;
+			color: @sangoma-gray;
+		}
+	}
+}
+
+// Responsive
+@media (min-width: @grid-float-breakpoint) {
+	#footer {
+		height: @footer-height;
+	}
+}

@@ -1,0 +1,118 @@
+//
+// Sangoma data block components
+// --------------------------------------------------
+
+
+// Data block header controls
+.data-block header {
+	h2 + .btn,
+	h2 + .btn-group,
+	.data-header-actions {
+		float: right;
+		margin: 0;
+		padding: 0;
+		list-style: 0;
+		.clearfix();
+		& > li {
+			float: left;
+			display: block;
+			position: relative;
+			& + li {
+				margin-left: 5px;
+			}
+			& > a {
+				color: mix(@template-color, @white, 50%);
+				cursor: pointer;
+				display: inline-block;
+				font-weight: bold;
+				font-size: @font-size-base;
+				line-height: @line-height-base;
+				padding: 4px 12px;
+				text-align: center;
+				vertical-align: middle;
+				background: darken(@template-color, 15%);
+				border-radius: @border-radius-base;
+				.transition(all 350ms ease);
+				.caret {
+					border-color: mix(@template-color, @white, 50%) transparent;
+				}
+			}
+			& > a:hover,
+			&.open >  a,
+			&.active >  a {
+				color: @sangoma-dark;
+				background: @sangoma-white;
+				text-decoration: none;
+				.caret {
+					border-color: @sangoma-dark transparent;
+				}
+			}
+			.loading {
+				display: block;
+			}
+		}
+	}
+}
+
+// Data block nav
+.data-block .data-block-nav {
+	background: @sangoma-gray-light;
+	ul {
+		padding: (@base-margin - 5) @base-margin;
+		margin: 0;
+		list-style: none;
+		.clearfix();
+		& > li {
+			float: left;
+			display: block;
+			position: relative;
+			& + li {
+				margin-left: 5px;
+			}
+			a {
+				color: mix(@sangoma-gray, @white, 40%);
+				cursor: pointer;
+				display: inline-block;
+				font-weight: bold;
+				font-size: @font-size-base;
+				line-height: @line-height-base;
+				padding: 4px 12px;
+				text-align: center;
+				vertical-align: middle;
+				background: @sangoma-gray;
+				border-radius: @border-radius-base;
+				.transition(all 350ms ease);
+			}
+			a:hover,
+			&.open a,
+			&.active a {
+				color: @sangoma-white;
+				background: darken(@sangoma-gray, 18%);
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// Data block header search
+.data-block header {
+	.header-search {
+		display: inline;
+		float: right;
+		border: none;
+		margin: 0;
+		input {
+			margin: 0;
+			width: 106px;
+			height: 28px;
+			padding: @padding-base-vertical @padding-base-horizontal;
+			font-size: @font-size-base;
+			line-height: @line-height-base;
+			font-size: @font-size-small;
+			color: mix(@template-color, @white, 50%);
+			border: none;
+			background-color: darken(@template-color, 15%);
+			border-radius: @input-border-radius;
+		}
+	}
+}

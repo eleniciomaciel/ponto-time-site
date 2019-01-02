@@ -1,0 +1,133 @@
+//
+// Plugin: switch
+// --------------------------------------------------
+
+
+// Bootstrap switch
+.has-switch {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	text-align: left;
+	font-weight: bold;
+	overflow: hidden;
+	line-height: 8px;
+	min-width: 100px;
+	border-radius: @border-radius-base;
+	.user-select(none);
+	&.switch-mini {
+		min-width: 72px;
+	}
+	&.switch-small {
+		min-width: 80px;
+	}
+	&.switch-large {
+		min-width: 120px;
+	}
+	&.deactivate {
+		.opacity(0.5);
+		cursor: default !important;
+		label,
+		span {
+			cursor: default !important;
+		}
+	}
+	> div {
+		display: inline-block;
+		width: 150%;
+		position: relative;
+		top: 0;
+		&.switch-animate {
+			.transition(left 0.5s);
+		}
+		&.switch-off {
+			left: -49%;
+		}
+		&.switch-on {
+			left: 0%;
+		}
+	}
+	input[type=checkbox] {
+		display: none;
+		//debug
+		//position: absolute;
+		//margin-left: 60%;
+		//z-index: 123;
+	}
+	span,
+	label {
+		cursor: pointer;
+		position: relative;
+		display: inline-block;
+		height: 100%;
+		padding-bottom: 4px;
+		padding-top: 4px;
+		font-size: @font-size-base;
+		line-height: 20px;
+		.box-sizing(border-box);
+		&.switch-mini {
+			padding-bottom: 4px;
+			padding-top: 4px;
+			font-size: 10px;
+			line-height: 9px;
+		}
+		&.switch-small {
+			padding-bottom: 3px;
+			padding-top: 3px;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		&.switch-large {
+			padding-bottom: 9px;
+			padding-top: 9px;
+			font-size: 16px;
+			line-height: normal;
+		}
+		[class^="icon-"],
+		[class*=" icon-"] {
+			padding: 0;
+		}
+	}
+	label {
+		margin-top: -1px;
+		margin-bottom: -1px;
+		z-index: 100;
+		width: 34%;
+		background: @sangoma-silver;
+	}
+	span {
+		text-align: center;
+		z-index: 1;
+		width: 33%;
+		&.switch-left {
+			.border-left-radius(4px);
+		}
+		&.switch-right {
+			color: @sangoma-gray;
+			background: @sangoma-silver;
+			text-shadow: none;
+		}
+		&.switch-primary,
+		&.switch-left {
+			color: @white;
+			background: @template-color;
+			text-shadow: none;
+		}
+		&.switch-info {
+			color: @white;
+			background: @sangoma-blue;
+		}
+		&.switch-success {
+			color: @white;
+			background: @sangoma-green;
+		}
+		&.switch-warning {
+			color: @white;
+			background: @sangoma-orange;
+		}
+		&.switch-danger {
+			color: @white;
+			background: @sangoma-red;
+		}
+	}
+}

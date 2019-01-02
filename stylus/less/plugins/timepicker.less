@@ -1,0 +1,44 @@
+//
+// Plugin: TimePicker
+// --------------------------------------------------
+
+
+// Time picker
+.bootstrap-timepicker {
+	.bootstrap-timepicker-widget {
+		&.dropdown-menu {
+			background: @sangoma-white;
+			min-width: 0;
+			&.open {
+				display: block;
+			}
+			&:after {
+				border-bottom: 6px solid @sangoma-white;
+			}
+			&:before {
+				border-bottom: 7px solid @sangoma-white;
+			}
+		}
+		table {
+			width: auto;
+			td {
+				height: 0;
+				font-weight: bold;
+				a {
+					padding: 0;
+					width: auto;
+					display: block;
+					color: @sangoma-gray;
+					&:hover {
+						border: none;
+						color: @white;
+						background: @template-color;
+					}
+				}
+			}
+		}
+	}
+	.bootstrap-timepicker-widget + .input-group-addon {
+		.border-left-radius(@input-border-radius);
+	}
+}

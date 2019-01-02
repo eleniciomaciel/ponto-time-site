@@ -1,0 +1,41 @@
+//
+// Sangoma jumbotron
+// --------------------------------------------------
+
+
+// Jumbotron color variants - see custom/mixnis.less
+.jumbotron {
+	line-height: 25px;
+	margin-bottom: @grid-gutter-width;
+	h1 {
+		letter-spacing: normal;
+		margin-bottom: 10px;
+	}
+	a {
+		text-decoration: underline;
+	}
+	&.turquoise {
+		.jumbotron-variant(@sangoma-turquoise; mix(@sangoma-turquoise, @white, 45%); @white);
+	}
+	&.orange {
+		.jumbotron-variant(@sangoma-orange; mix(@sangoma-orange, @white, 45%); @white);
+	}
+	&.purple {
+		.jumbotron-variant(@sangoma-purple; mix(@sangoma-purple, @white, 45%); @white);
+	}
+	&.green {
+		.jumbotron-variant(@sangoma-green; mix(@sangoma-green, @white, 45%); @white);
+	}
+	&.blue {
+		.jumbotron-variant(@sangoma-blue; mix(@sangoma-blue, @white, 45%); @white);
+	}
+	&.red {
+		.jumbotron-variant(@sangoma-red; mix(@sangoma-red, @white, 45%); @white);
+	}
+	&.gray {
+		.jumbotron-variant(@sangoma-gray; mix(@sangoma-gray, @white, 5%); @white);
+	}
+	&.dark {
+		.jumbotron-variant(@sangoma-dark; mix(@sangoma-dark, @white, 45%); @white);
+	}
+}

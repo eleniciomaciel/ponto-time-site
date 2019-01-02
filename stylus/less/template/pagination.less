@@ -1,0 +1,49 @@
+//
+// Sangoma pagination
+// --------------------------------------------------
+
+
+// Overwrite default pagination style
+.pagination {
+	font-weight: bold;
+	& > li > a,
+	& > li > span {
+		border: none;
+		margin-left: 0;
+	}
+	& > li > a {
+		color: darken(@sangoma-gray, 5%);
+	}
+	& > li > a,
+	& > li > span {
+		&:hover,
+		&:focus {
+			color: @white;
+		}
+	}
+
+	& > li.disabled {
+		& > span,
+		& > a,
+		& > a:hover,
+		& > a:focus {
+			color: @pagination-disabled-color;
+			background-color: @sangoma-silver;
+			.opacity(0.65);
+		}
+	}
+
+	// Adjust icon position
+	.elusive {
+		position: relative;
+		top: 2px;
+	}
+}
+
+// Pagination alignment
+.pagination-right {
+	text-align: right;
+}
+.pagination-center {
+	text-align: center;
+}

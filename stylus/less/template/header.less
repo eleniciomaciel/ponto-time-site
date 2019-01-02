@@ -1,0 +1,37 @@
+//
+// Sangoma main header
+// --------------------------------------------------
+
+#header {
+	padding-top: (@base-margin * 1.5);
+	margin-bottom: @grid-gutter-width;
+	.clearfix();
+	& > h1 {
+		margin: 0;
+		color: @template-dark;
+		a {
+			.hide-text();
+			display: block;
+			width: 220px;
+			height: @template-logo-height;
+			background-repeat: no-repeat;
+			background-image: url("@{template-logo}");
+		}
+		span {
+			margin: -20px 0 0 71px;
+			float: left;
+			clear: left;
+			line-height: normal;
+			color: #a6a8a8;
+			font-weight: bold;
+			font-size: @font-size-small;
+		}
+	}
+}
+
+// Responsive
+@media (min-width: @screen-xs) {
+	#header > h1 {
+		float: left;
+	}
+}

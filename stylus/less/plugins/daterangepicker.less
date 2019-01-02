@@ -1,0 +1,27 @@
+//
+// Plugin: DateRangePicker
+// --------------------------------------------------
+
+
+/* Date Range picker */
+.daterangepicker {
+	background-color: @sangoma-white;
+	.calendar-date {
+		border: none;
+	}
+	&.opensright,
+	&.opensleft {
+		.ranges,
+		.calendar {
+			margin: 0 4px;
+		}
+	}
+	&.opensleft:before,
+	&.opensright:before {
+		border-bottom: 7px solid @sangoma-white;
+	}
+	&.opensleft:after,
+	&.opensright:after {
+		border-bottom: 6px solid @sangoma-white;
+	}
+}

@@ -1,0 +1,110 @@
+//
+// Plugin: ColorPicker
+// --------------------------------------------------
+
+
+// Color picker 
+@colorpicker-img-path:                            '../img/plugins/colorpicker';
+.colorpicker {
+	&.dropdown-menu {
+		background-color: @sangoma-white;
+	}
+	& + .input-group-addon,
+	.input-group-addon + & {
+		padding: 5px 8px 5px 7px;
+	}
+}
+.colorpicker-saturation {
+	width: 100px;
+	height: 100px;
+	background-image: url("@{colorpicker-img-path}/saturation.png");
+	cursor: crosshair;
+	float: left;
+	i {
+		display: block;
+		height: 5px;
+		width: 5px;
+		border: 1px solid #000;
+		border-radius: 5px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: -4px 0 0 -4px;
+		b {
+			display: block;
+			height: 5px;
+			width: 5px;
+			border: 1px solid #fff;
+			border-radius: 5px;
+		}
+	}
+}
+.colorpicker-hue,
+.colorpicker-alpha {
+	width: 15px;
+	height: 100px;
+	float: left;
+	cursor: row-resize;
+	margin-left: 4px;
+	margin-bottom: 4px;
+	i {
+		display: block;
+		height: 1px;
+		background: #000;
+		border-top: 1px solid #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		margin-top: -1px;
+	}
+}
+.colorpicker-hue {
+	background-image: url("@{colorpicker-img-path}/hue.png");
+}
+.colorpicker-alpha {
+	background-image: url("@{colorpicker-img-path}/alpha.png");
+	display:none;
+}
+.colorpicker {
+	.clearfix();
+	top: 0;
+	left: 0;
+	padding: 4px;
+	min-width: 120px;
+	margin-top: 1px;
+	border-radius: 4px;
+	&:after {
+		content: '';
+		display: inline-block;
+		border-left:   6px solid transparent;
+		border-right:  6px solid transparent;
+		border-bottom: 6px solid @sangoma-white;
+		position: absolute;
+		top: -6px;
+		left: 7px;
+	}
+	div {
+		position: relative;
+	}
+	&.alpha {
+		min-width: 140px;
+		.colorpicker-alpha {
+			display: block;
+		}
+	}
+}
+.colorpicker-color {
+	height: 10px;
+	margin-top: 5px;
+	clear: both;
+	background-image: url("@{colorpicker-img-path}/alpha.png");
+	background-position: 0 100%;
+	div {
+		height: 10px;
+	}
+}
+.color {
+	display: block;
+	.square(16px);
+}

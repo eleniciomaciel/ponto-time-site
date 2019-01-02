@@ -1,0 +1,81 @@
+//
+// Plugin: DataTables
+// --------------------------------------------------
+
+
+// jQuery DataTables
+@datatable-img-path:                              '../img/plugins/dataTables';
+.dataTables_wrapper {
+	table.table {
+		margin-bottom: (@base-margin / 2);
+	}
+	div.dataTables_length,
+	div.dataTables_filter {
+		.clearfix();
+		label {
+			width: 100%;
+			line-height: 30px;
+			margin-bottom: (@base-margin / 2);
+		}
+		select,
+		input {
+			.form-control;
+			.input-sm;
+		}
+	}
+	div.dataTables_length {
+		select {
+			width: 75px;
+			float: left;
+			margin-right: (@base-margin / 2);
+		}
+	}
+	div.dataTables_filter {
+		label {
+			float: right;
+			text-align: right;
+		}
+		input {
+			width: 175px;
+			float: right;
+			margin-left: (@base-margin / 2);
+		}
+	}
+	table thead .sorting,
+	table thead .sorting_asc,
+	table thead .sorting_desc,
+	table thead .sorting_asc_disabled,
+	table thead .sorting_desc_disabled {
+		cursor: pointer;
+	}
+	table.table thead .sorting {
+		background-image: url("@{datatable-img-path}/sort_both.png");
+	}
+	table.table thead .sorting_asc {
+		background-image: url("@{datatable-img-path}/sort_asc.png");
+	}
+	table.table thead .sorting_desc {
+		background-image: url("@{datatable-img-path}/sort_desc.png");
+	}
+	table.table thead .sorting_asc_disabled {
+		background-image: url("@{datatable-img-path}/sort_asc_disabled.png");
+	}
+	table.table thead .sorting_desc_disabled {
+		background-image: url("@{datatable-img-path}/sort_desc_disabled.png");
+	}
+	table.table thead .sorting,
+	table.table thead .sorting_asc,
+	table.table thead .sorting_desc,
+	table.table thead .sorting_asc_disabled,
+	table.table thead .sorting_desc_disabled {
+		background-position: center right;
+		background-repeat: no-repeat;
+	}
+	table.dataTable th:active {
+		outline: none;
+	}
+	.dataTables_info {
+		margin-top: 0;
+		color: @sangoma-gray;
+	}
+}

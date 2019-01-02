@@ -1,0 +1,81 @@
+//
+// Sangoma widgets
+// --------------------------------------------------
+
+
+// Widgets
+.widget-block {
+	display: block;
+	padding: @base-margin;
+	text-align: center;
+	.transition(all 300ms ease);
+	.widget-icon,
+	strong {
+		color: @link-color;
+		display: block;
+		font-size: (@font-size-small * 5);
+		line-height: 1;
+	}
+	strong {
+		font-size: (@font-size-base + 2);
+	}
+	&.widget-text {
+		padding: 32px 0 33px;
+		span {
+			display: block;
+			color: @link-color;
+			font-weight: bold;
+			line-height: 1;
+			font-size: (@font-size-large + 10);
+			margin-bottom: 5px;
+		}
+		strong {
+			color: @sangoma-gray;
+			font-size: @font-size-base;
+			font-weight: bold;
+			.transition(color ease 0.3s);
+		}
+	}
+	.sparkline {
+		display: block;
+		margin: 5px auto;
+		canvas {
+			display: block !important;
+			margin: 0 auto;
+		}
+	}
+	.sparkline + strong,
+	.sparkline + a {
+		color: @sangoma-gray;
+		font-size: @font-size-base;
+		font-weight: bold;
+		.transition(color ease 0.3s);
+	}
+	.sparkline + a:hover {
+		color: @link-color;
+		text-decoration: none;
+	}
+}
+a.widget-block:hover {
+	text-decoration: none;
+	background: @link-color;
+	.widget-icon,
+	&.widget-text span,
+	strong {
+		color: @white;
+	}
+}
+
+// Widget badge
+.widget-block .badge {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	z-index: 1;
+}
+
+// Widget fixed height
+.widget-block.widget-fixed {
+	min-height: 110px;
+	height: 110px;
+}

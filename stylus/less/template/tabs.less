@@ -1,0 +1,67 @@
+//
+// Sangoma tabs
+// --------------------------------------------------
+
+
+// Overwrite default tabs
+.tabbable {
+	overflow: hidden;
+}
+.nav-tabs {
+	border: none;
+	& > li {
+		margin: 0;
+	}
+	& > li > a {
+		padding: 6px 15px;
+		font-weight: bold;
+		color: @sangoma-gray;
+		border: none;
+		background: @sangoma-white;
+		border-radius: @border-radius-base;
+		.transition(all 300ms ease);
+	}
+	& > li > a:hover,
+	& > li > a:focus,
+	& > li.active > a,
+	& > li.active > a:hover,
+	& > li.active > a:focus {
+		color: @white;
+		border: none;
+		background: @template-color;
+	}
+}
+
+@media (min-width: @grid-float-breakpoint) {
+
+	// Tab direction
+	.tabs-left .nav-tabs > li,
+	.tabs-right .nav-tabs > li {
+		float: none;
+		& + li {
+			margin-top: 2px;
+		}
+	}
+	.tabs-left {
+		.tab-content {
+			float: right;
+			width: 80%;
+			padding-left: @base-margin;
+		}
+		.nav-tabs {
+			float: left;
+			width: 20%;
+		}
+	}
+	.tabs-right {
+		.tab-content {
+			float: left;
+			width: 80%;
+			padding-right: @base-margin;
+		}
+		.nav-tabs {
+			float: right;
+			width: 20%;
+		}
+	}
+}

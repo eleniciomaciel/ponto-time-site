@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/c8-ponto-time_NEW_MENU/system_ponto_time_demo/';
+$config['base_url'] = 'http://localhost/ponto-time-git/';
 
 /*
 |--------------------------------------------------------------------------

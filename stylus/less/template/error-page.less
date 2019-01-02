@@ -1,0 +1,50 @@
+//
+// Sangoma error page
+// --------------------------------------------------
+
+
+body.error-page {
+	background: @template-color;
+	overflow: hidden;
+
+	// Error page container
+	.container {
+		width: 90%;
+		margin-top: 150px;
+		max-width: 600px;
+		text-align: center;
+
+		// Error code
+		h1 {
+			margin: 0;
+			font-size: (@font-size-base * 12);
+			line-height: normal;
+			color: @white;
+			.opacity(0.7);
+		}
+
+		// Error headline
+		p {
+			margin: (@base-margin / 2) 0 @base-margin;
+			padding: @base-margin;
+			background: @white;
+			border-radius: @border-radius-large;
+
+			// Error description
+			&.description {
+				margin: -@base-margin 0 (@base-margin * 2);
+				padding: 0;
+				font-size: (@font-size-base * 3);
+				background: none;
+				line-height: normal;
+				color: @white;
+				.opacity(0.7);
+			}
+
+			// Error button
+			.btn {
+				margin-top: @base-margin;
+			}
+		}
+	}
+}
